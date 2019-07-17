@@ -2,7 +2,7 @@
     color: $text-white;
 }
 .header {
-    height: 60vh;
+    height: 75vh;
     overflow: hidden;
     text-align: center;
     margin: auto;
@@ -34,17 +34,17 @@
         h1 {
             line-height: 3rem;
             margin-top: 2rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             @include desktop {
                 font-size: $text-h2;
             }
         }
         p {
             line-height: 1.5rem;
-            margin-bottom: 2rem;
         }
         &__button {
             width: 95%;
+            margin-top: 5rem;
             background: red;
             a {
                 line-height: 50px;

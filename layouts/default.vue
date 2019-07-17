@@ -17,64 +17,84 @@
       </div>
     </nav>
     <nuxt />
-    <footer>
-      <div>
-        <div>CATEGORÍAS<span><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
-        <div>
-          <a>Cursos de Ilustración y Dibujo</a>
-          <a>Cursos de Diseño</a>
-          <a>Cursos de Animación & 3D</a>
-          <a>Cursos de Web</a>
-          <a>Cursos de Fotografía</a>
-          <a>Cursos de Marketing Digital</a>
+    <footer class="footer">
+      <div class="footer__box1">
+        <div class="footer__dropdown">
+          <div class="footer__dropdown--title">CATEGORÍAS<span style="width:100%;" class="text-right text-body1"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--list">
+            <a>Cursos de Ilustración y Dibujo</a>
+            <a>Cursos de Diseño</a>
+            <a>Cursos de Animación & 3D</a>
+            <a>Cursos de Web</a>
+            <a>Cursos de Fotografía</a>
+            <a>Cursos de Marketing Digital</a>
+          </div>
         </div>
-        <div>SOFTWARE<span><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
-        <div>
-          <a>Cursos de Adobe Animate CC</a>
-          <a>Cursos de Audition</a>
-          <a>Cursos de Photoshop Lightroom</a>
-          <a>Cursos de Premiere</a>
-          <a>Cursos de Illustrator</a>
-          <a>Cursos de Adobe Photoshop</a>
+        <div class="footer__dropdown">
+          <div class="footer__dropdown--title">SOFTWARE<span style="width:100%;" class="text-right text-body1"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--list">
+            <a>Cursos de Adobe Animate CC</a>
+            <a>Cursos de Audition</a>
+            <a>Cursos de Photoshop Lightroom</a>
+            <a>Cursos de Premiere</a>
+            <a>Cursos de Illustrator</a>
+            <a>Cursos de Adobe Photoshop</a>
+          </div>
         </div>
-        <div>CONÓCENOS<span><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
-        <div>
-          <a>estamos contratando!</a>
-          <a>sobre crehana</a>
-          <a>terminos y condiciones</a>
-          <a>politicas de privacidad</a>
-          <a>politica de cookies</a>
+        <div class="footer__dropdown">
+          <div class="footer__dropdown--title">CONÓCENOS<span style="width:100%;" class="text-right text-body1"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--list">
+            <a>estamos contratando!</a>
+            <a>sobre crehana</a>
+            <a>terminos y condiciones</a>
+            <a>politicas de privacidad</a>
+            <a>politica de cookies</a>
+            <!-- <a>solicitudes</a> -->
+          </div>
         </div>
-        <div>COMUNIDAD<span><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
-        <div>
-          <a>becas</a>
-          <a>historias</a>
-          <a>tarjetas de regalo</a>
-          <a>proyectos</a>
-          <a>recursos</a>
-          <a>blog</a>
+        <div class="footer__dropdown">
+          <div class="footer__dropdown--title">COMUNIDAD<span style="width:100%;" class="text-right text-body1"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--list">
+            <a>becas</a>
+            <a>historias</a>
+            <a>tarjetas de regalo</a>
+            <a>proyectos</a>
+            <a>recursos</a>
+            <a>blog</a>
+          </div>
         </div>
       </div>
-      <div>
-        <div><font-awesome-icon :icon="['fab', 'facebook-f']"/></div>
-        <div><font-awesome-icon :icon="['fab', 'twitter']"/></div>
-        <div><font-awesome-icon :icon="['fab', 'instagram']"/></div>
-        <div><font-awesome-icon :icon="['fab', 'linkedin']"/></div>
-        <div><font-awesome-icon :icon="['fab', 'youtube']"/></div>
-      </div>
-      <div>
-        <h5>DESCARGA NUESTRA APP EN:</h5>
-        <button><span><font-awesome-icon :icon="['fab', 'google-play']"/></span>Google play</button>
-        <button><span><font-awesome-icon :icon="['fab', 'apple']"/></span>App store</button>
-        <button><span><font-awesome-icon :icon="['fas', 'comments-dollar']"/></span>App store</button>
-      </div>
-      <div>
-        <div>
-          <h6>Copyright&#169; Crehana 2019</h6>
-          <h6>Todos los derechos reservados</h6>
+      <div class="footer__box2">
+        <div class="footer__boxicons">
+          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'facebook-f']"/></div>
+          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'twitter']"/></div>
+          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'instagram']"/></div>
+          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'linkedin']"/></div>
+          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'youtube']"/></div>
+        </div>
+        <div class="footer__boxbuttons">
+          <h5 class="text-grey" style="line-height: 3rem;">DESCARGA NUESTRA APP EN:</h5>
+          <button class="btn text-subtitle1 text-white" style="margin-bottom: 20px;">
+            <span class="text-h6"><font-awesome-icon :icon="['fab', 'google-play']"/></span>
+            Google play
+          </button>
+          <button class="btn text-subtitle1 text-white">
+            <span class="text-h6"><font-awesome-icon :icon="['fab', 'apple']"/></span>
+            App store
+          </button>
+          <button>
+            <span><font-awesome-icon :icon="['fas', 'comments-dollar']"/></span>
+            App store
+          </button>
         </div>
       </div>
     </footer>
+    <div class="footer__copyright">
+      <div>
+        <h6 class="text-grey" style="text-align: center;">Copyright&#169; Crehana 2019</h6>
+        <h6 class="text-grey" style="text-align: center;">Todos los derechos reservados</h6>
+      </div>
+    </div>
   </div>
 </template>
 <!-- <p>Icons</p>

@@ -9,7 +9,7 @@
         <h1 class="text-h4 text-title text-space3">Lleva tu talento al siguiente nivel</h1>
         <p class="text-subtitle1 text-light">Construye tu camino profesional. Sin horarios ni límites. 100% Online.</p>
         <div class="header__box__button">
-          <a>Empezar ahora</a>
+          <a class="text-subtitle1">Empezar ahora</a>
         </div>
       </div>
     </header>
