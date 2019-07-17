@@ -1,0 +1,54 @@
+.header__container {
+    color: $text-white;
+}
+.header {
+    height: 60vh;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    &__video {
+        position: absolute;
+        z-index: 1;
+    }
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 5;
+    }
+    &__box {
+        width: 100%;
+        height: 100%;
+        padding: 0 1.5rem 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 10;
+        text-align: center;
+        h1 {
+            line-height: 3rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            @include desktop {
+                font-size: $text-h2;
+            }
+        }
+        p {
+            line-height: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        &__button {
+            width: 95%;
+            background: red;
+            a {
+                line-height: 50px;
+            }
+        }
+    }
+}

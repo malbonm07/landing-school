@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+* {
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Lato'
+}
+
+
+$center-space: 95%;
+
+$iconSize-navbar: 18px;
+
+$text-white: white;
+$text-black: black;
+$text-grey: #9E9E9E;
+
+$text-h1: 96px;
+$text-h2: 60px;
+$text-h3: 48px;
+$text-h4: 34px;
+$text-h5: 24px;
+$text-h6: 20px;
+$text-subtitle1: 16px; 
+$text-body1: 14px; 
+$text-caption: 12px;
+$text-overline: 10px;
+
+$text-light: 300;
+$text-regular: 400;
+$text-medium: 700;
+$text-title: 900;
+
+$btnheight: 30px;
+
+
+
+.text-h1 {
+    font-size: $text-h1;
+}
+.text-h2 {
+    font-size: $text-h2;
+}
+.text-h3 {
+    font-size: $text-h3;
+}
+.text-h4 {
+    font-size: $text-h4;
+}
+.text-h5 {
+    font-size: $text-h5;
+}
+.text-h6 {
+    font-size: $text-h6;
+}
+.text-subtitle1 {
+    font-size: $text-subtitle1;
+}
+.text-body1 {
+    font-size: $text-body1;
+}
+.text-caption {
+    font-size: $text-caption;
+}
+.text-overline {
+    font-size: $text-overline;
+}
+
+
+.text-light {
+    font-weight: $text-light;
+}
+.text-regular {
+    font-weight: $text-regular;
+}
+.text-medium {
+    font-weight: $text-medium;
+}
+.text-title {
+    font-weight: $text-title;
+}
+
+.text-space1 {
+    letter-spacing: 5px; 
+}
+.text-space2 {
+    letter-spacing: 3px; 
+}
+.text-space3 {
+    letter-spacing: 2px; 
+}
