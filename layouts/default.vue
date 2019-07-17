@@ -20,7 +20,7 @@
     <footer class="footer">
       <div class="footer__box1">
         <div class="footer__dropdown">
-          <div class="footer__dropdown--title">CATEGORÍAS<span style="width:100%;" class="text-right text-body1"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--title text-grey1">CATEGORÍAS<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
           <div class="footer__dropdown--list">
             <a>Cursos de Ilustración y Dibujo</a>
             <a>Cursos de Diseño</a>
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="footer__dropdown">
-          <div class="footer__dropdown--title">SOFTWARE<span style="width:100%;" class="text-right text-body1"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--title text-grey1">SOFTWARE<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
           <div class="footer__dropdown--list">
             <a>Cursos de Adobe Animate CC</a>
             <a>Cursos de Audition</a>
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="footer__dropdown">
-          <div class="footer__dropdown--title">CONÓCENOS<span style="width:100%;" class="text-right text-body1"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--title text-grey1">CONÓCENOS<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
           <div class="footer__dropdown--list">
             <a>estamos contratando!</a>
             <a>sobre crehana</a>
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="footer__dropdown">
-          <div class="footer__dropdown--title">COMUNIDAD<span style="width:100%;" class="text-right text-body1"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--title text-grey1">COMUNIDAD<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
           <div class="footer__dropdown--list">
             <a>becas</a>
             <a>historias</a>
@@ -73,7 +73,7 @@
           <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'youtube']"/></div>
         </div>
         <div class="footer__boxbuttons">
-          <h5 class="text-grey" style="line-height: 3rem;">DESCARGA NUESTRA APP EN:</h5>
+          <h5 class="text-grey1" style="line-height: 3rem;">DESCARGA NUESTRA APP EN:</h5>
           <button class="btn text-subtitle1 text-white" style="margin-bottom: 20px;">
             <span class="text-h6"><font-awesome-icon :icon="['fab', 'google-play']"/></span>
             Google play
@@ -82,17 +82,18 @@
             <span class="text-h6"><font-awesome-icon :icon="['fab', 'apple']"/></span>
             App store
           </button>
-          <button>
+          <button class="btn-outline text-body1 text-black" style="margin-top:40px; margin-bottom: 40px;">
             <span><font-awesome-icon :icon="['fas', 'comments-dollar']"/></span>
-            App store
+            Perú | $/(PEN)
           </button>
         </div>
       </div>
     </footer>
+    <hr class="separator">
     <div class="footer__copyright">
       <div>
-        <h6 class="text-grey" style="text-align: center;">Copyright&#169; Crehana 2019</h6>
-        <h6 class="text-grey" style="text-align: center;">Todos los derechos reservados</h6>
+        <h6 class="text-grey2 text-regular text-space3" style="text-align: center;">Copyright&#169; Crehana 2019</h6>
+        <h6 class="text-grey2 text-regular text-space3" style="text-align: center;">Todos los derechos reservados</h6>
       </div>
     </div>
   </div>
@@ -102,6 +103,14 @@
 <font-awesome-icon :icon="['fab', 'github']"/>
 <font-awesome-icon :icon="['fab', 'facebook']"/>
 <font-awesome-icon :icon="['fas', 'shopping-cart']"/> -->
+<script>
+export default {
+  mounted() {
+    console.log("se monto el server")
+  }
+}
+</script>
+
 <style lang="scss">
 *,
 *:before,

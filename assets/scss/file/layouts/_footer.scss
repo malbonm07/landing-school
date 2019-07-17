@@ -31,17 +31,34 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    border-bottom: 1px solid $text-grey-light;
     &--title {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid black;
+        padding: 20px 0 20px 0;
+        // border-bottom: 1px solid black;
+        font-size: $text-subtitle1;
+        @include desktop {
+            border-bottom: none;
+            font-size: $text-body1;
+        }
     }
     &--list {
         display: flex;
         flex-direction: column;
-
+        margin-bottom: 20px;
+        a {
+            line-height: 25px;
+            font-size: $text-subtitle1;
+            text-transform: capitalize;
+            color: $text-grey3;
+        }
+    }
+    .chevron {
+        @include desktop {
+            display: none;
+        }
     }
 }
 
@@ -61,19 +78,27 @@
     justify-content: center;
     align-items: center;
     .btn {
-        width: 250px;
-        line-height: 40px;
-        background: red;
-        border: none;
-        outline: none;
+        @include btn(250px, #4B22F4, #4B22F4);
+        span {
+            margin-right: 8px;
+        }
+    }
+    .btn-outline {
+        @include btn-outline(250px, #E0E0E0, $text-grey2);
         span {
             margin-right: 8px;
         }
     }
 }
 
+.separator {
+    @include separator(70%, $text-grey1);
+    margin-bottom: 20px;
+}
+
 .footer__copyright {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }

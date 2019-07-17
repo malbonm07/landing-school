@@ -13,7 +13,10 @@ $iconSize-navbar: 18px;
 
 $text-white: white;
 $text-black: black;
-$text-grey: #9E9E9E;
+$text-grey-light: #E0E0E0;
+$text-grey1: #BDBDBD;
+$text-grey2: #9E9E9E;
+$text-grey3: #333;
 
 $text-h1: 96px;
 $text-h2: 60px;
@@ -96,8 +99,11 @@ $btnheight: 30px;
 .text-black{
     color: $text-black;
 }
-.text-grey{
-    color: $text-grey;
+.text-grey1{
+    color: $text-grey1;
+}
+.text-grey2{
+    color: $text-grey2;
 }
 
 .text-center {

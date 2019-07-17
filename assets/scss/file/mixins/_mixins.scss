@@ -13,3 +13,31 @@
 @mixin lg-desktop {
     @media (min-width: 1800px) { @content; }
   }
+
+@mixin btn($width, $color1, $color2) {
+    width: $width;
+    line-height: 40px;
+    background: $color1;
+    border: none;
+    outline: none;
+    &:hover {
+      background: $color2;
+      cursor: pointer;
+    }
+}
+@mixin btn-outline($width, $color1, $color2) {
+    width: $width;
+    line-height: 40px;
+    background: transparent;
+    border: 1px solid $color1;
+    outline: none;
+    &:hover {
+      border-color: $color2;
+      cursor: pointer;
+    }
+}
+@mixin separator($width, $color) {
+    width: $width;
+    border: 0.5px solid $color;
+    margin: auto;
+}
