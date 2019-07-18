@@ -87,6 +87,7 @@ export default {
     @include btn-outline(80%, #4B22F4, #4B22F4);
     color: #4B22F4;
     transition: .2s;
+    margin-top: 2rem;
     span {
         margin-right: 5px;
     }
