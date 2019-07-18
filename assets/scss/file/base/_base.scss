@@ -5,7 +5,15 @@
 html {
     font-family: 'Lato'
 }
-
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+.capitalize {
+    text-transform: capitalize;
+}
 
 $center-space: 95%;
 
@@ -111,4 +119,14 @@ $btnheight: 30px;
 }
 .text-right {
     text-align: right;
+}
+
+.line-height2 {
+    line-height: 2rem;
+}
+.line-height3 {
+    line-height: 3rem;
+}
+.line-height4 {
+    line-height: 4rem;
 }

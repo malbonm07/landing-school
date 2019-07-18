@@ -28,6 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/swiper.js', ssr: false }
   ],
   /*
   ** Nuxt.js modules
@@ -55,6 +56,7 @@ export default {
   styleResources: {
     scss: [
       './assets/scss/file/main.scss',
+      'swiper/dist/css/swiper.css'
       // './assets/abstracts/_mixins.scss' // use underscore "_" & also file extension ".scss"
       ]
   },

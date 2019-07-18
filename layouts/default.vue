@@ -20,7 +20,7 @@
     <footer class="footer">
       <div class="footer__box1">
         <div class="footer__dropdown">
-          <div class="footer__dropdown--title text-grey1">CATEGORÍAS<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--title text-grey1 dropdown" ref="dropdown">CATEGORÍAS<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/></span></div>
           <div class="footer__dropdown--list">
             <a>Cursos de Ilustración y Dibujo</a>
             <a>Cursos de Diseño</a>
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="footer__dropdown">
-          <div class="footer__dropdown--title text-grey1">SOFTWARE<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--title text-grey1 dropdown" ref="dropdown">SOFTWARE<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/></span></div>
           <div class="footer__dropdown--list">
             <a>Cursos de Adobe Animate CC</a>
             <a>Cursos de Audition</a>
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="footer__dropdown">
-          <div class="footer__dropdown--title text-grey1">CONÓCENOS<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--title text-grey1 dropdown" ref="dropdown">CONÓCENOS<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/></span></div>
           <div class="footer__dropdown--list">
             <a>estamos contratando!</a>
             <a>sobre crehana</a>
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="footer__dropdown">
-          <div class="footer__dropdown--title text-grey1">COMUNIDAD<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon :icon="['fas', 'chevron-right']"/></span></div>
+          <div class="footer__dropdown--title text-grey1 dropdown" ref="dropdown">COMUNIDAD<span style="width:100%;" class="text-right text-body1 chevron"><font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/></span></div>
           <div class="footer__dropdown--list">
             <a>becas</a>
             <a>historias</a>
@@ -104,9 +104,22 @@
 <font-awesome-icon :icon="['fab', 'facebook']"/>
 <font-awesome-icon :icon="['fas', 'shopping-cart']"/> -->
 <script>
+
 export default {
   mounted() {
-    console.log("se monto el server")
+    let dropdownBtn = document.querySelectorAll('.footer__dropdown--title');
+    let dropdownList = document.querySelectorAll('.footer__dropdown--list');
+    const dropdownBtnArray = Array.from(dropdownBtn)
+    dropdownBtnArray.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        let btnContent = btn.nextElementSibling;
+        let btnIcon = btn.childNodes[1].childNodes[0]
+        btnContent.classList.toggle('activeDropdownContent')
+        btnIcon.classList.toggle('activeChevron')
+      })
+    })
+
   }
 }
 </script>

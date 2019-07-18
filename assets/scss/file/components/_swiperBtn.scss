@@ -1,0 +1,18 @@
+.swiper-pagination__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    .swiper-button {
+        font-size: 18px;
+        color: #4B22F4;
+        border: none;
+        outline: none;
+        margin: 0 15px 0 15px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
