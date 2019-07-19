@@ -1,16 +1,15 @@
 <template>
     <div class="card-img">
         <div class="card-img__img">
-            <img :src="dataObject.img" alt="Couse" class="center" style="display:block;">
+            <img :src="dataObject.img" alt="Couse" class="center">
         </div>
         <div class="card-img__content">
             <p class="card-img__content--title capitalize text-medium">{{dataObject.title}}</p>
-            <p class="card-img__content--description text-light">
-                <span style="margin-right:7px;"><font-awesome-icon :icon="['fa', 'clock']"/></span>
+            <p class="card-img__content--description text-regular">
                 {{dataObject.description}}
             </p>
             <div class="card-img__content--hidden-text text-medium">
-                <a>Ver Detalles del Curso</a>
+                <a>Ver Cursos</a>
             </div>
         </div>
     </div>
@@ -36,6 +35,7 @@ export default {
         position: relative;
     }
     .center {
+        transform: translateX(-15%);
         transition: transform 0.3s;
     }
     &__content {
@@ -50,7 +50,7 @@ export default {
             margin-bottom: 0.5rem;
         }
         &--description {
-            font-size: $text-caption;
+            font-size: $text-subtitle1;
             margin-bottom: 1.5rem;
         }
     }

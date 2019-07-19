@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="sliderCard__content">
-            <h3 class="text-subtitle1">{{courseObject.title}}</h3>
+            <h3 class="text-subtitle1 text-center mt-1 mb-1">{{courseObject.title}}</h3>
             <p class="text-grey2 text-body1 capitalize"><span></span>{{courseObject.nivel}}</p>
             <p class="line-height3">
                 <span style="color: red;" class="text-h6">S/&nbsp;</span>
@@ -78,9 +78,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        h3 {
-            line-height: 4rem;
-        }
+        padding: 5px;
     }
 }
 .btn--content {

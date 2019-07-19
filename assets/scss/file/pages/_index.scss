@@ -20,6 +20,9 @@
             font-size: $text-h3;
         }
     }
+    .stats-title {
+        width: 98%;
+    }
     .stats-list {
         width: 100%;
         display: flex;
@@ -35,6 +38,33 @@
             @include desktop {
                 margin-top: 0;
             }
+        }
+    }
+}
+
+.lanza-section {
+    height: auto;
+    &__title {
+        color:white;
+        text-align: center;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            height: 400px;
+            width: 100%;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: #4B23F4;
+            z-index: -1;
+        }
+        &--flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
