@@ -96,7 +96,7 @@
               >
                   <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
               </button>
-              <div class="swiper-pag" slot="pagination"></div>
+              <div class="swiper2-pag" slot="pagination"></div>
               <button
                   class="swiper-button swiper2-right"
               >
@@ -187,7 +187,7 @@
                 >
                     <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
                 </button>
-                <div class="swiper-pag" slot="pagination"></div>
+                <div class="swiper4-pag" slot="pagination"></div>
                 <button
                     class="swiper-button swiper4-right"
                 >
@@ -198,20 +198,48 @@
         </div>
       </div>
     </section>
-    <section class="casos-section mt-4">
+    <section class="casos-section mt-4 mb-4">
       <div>
         <h4 class="text-h4 text-title text-center pl-1 pr-1 mb-2">Nuestros casos de éxito</h4>
       </div>
-      <div></div>
-    </section>
-    <section>
       <div>
-        <div>
-          <h4>Nuestros casos de éxito</h4>
+        <div v-swiper:mySwipe5="swiperOption5" class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide" v-for="(caso, i) in casos" :key="i">
+                  <casosCard :casoObject="caso">
+                  </casosCard>
+                </li>
+            </ul>
+            <div class="swiper-pagination__content">
+              <button
+                  class="swiper-button swiper5-left"
+              >
+                  <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
+              </button>
+              <div class="swiper5-pag" slot="pagination"></div>
+              <button
+                  class="swiper-button swiper5-right"
+              >
+                  <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/>
+              </button>
+            </div>
         </div>
-        <div>
-
-        </div>
+      </div>
+    </section>
+    <section class="call-section">
+      <div class="call-section__premium pl-1 pr-1 pt-3 pb-3">
+        <span class="text-caption mb-1 block">PREMIUM</span>
+        <h4 class="text-h4 text-title mb-2">Obtén accseso total al catalogo con una membresia.</h4>
+        <button class="call-section__premium--btn text-body1 text-white text-medium text-space4">
+          Me interesa
+        </button>
+      </div>
+      <div class="call-section__empresas pl-1 pr-1 pt-3 pb-3">
+        <span class="text-caption mb-1 block">EMPRESAS</span>
+        <h4 class="text-h4 text-title mb-2">Potencia el talento de tu equipo con nuestros planes</h4>
+        <button class="call-section__empresas--btn text-body1 text-white text-medium text-space4">
+          Entérate más
+        </button>
       </div>
     </section>
   </div>
@@ -221,6 +249,7 @@
 import sliderCard from '~/components/sliderCard.vue'
 import sliderCardImg from '~/components/sliderCardImg.vue'
 import teacherCard from '~/components/teacherCard.vue'
+import casosCard from '~/components/casosCard.vue'
 
 import img1 from '~/assets/imagens/courses/img1.jpg'
 import img2 from '~/assets/imagens/courses/img2.jpg'
@@ -231,11 +260,17 @@ import teacher2 from '~/assets/imagens/teachers/img2.jpg'
 import teacher3 from '~/assets/imagens/teachers/img3.jpg'
 import teacher4 from '~/assets/imagens/teachers/img4.jpg'
 
+import caso1 from '~/assets/imagens/casos/img1.jpg'
+import caso2 from '~/assets/imagens/casos/img2.jpg'
+import caso3 from '~/assets/imagens/casos/img3.jpg'
+import caso4 from '~/assets/imagens/casos/img4.jpg'
+
 export default {
   components: {
     sliderCard,
     sliderCardImg,
-    teacherCard
+    teacherCard,
+    casosCard
   },
   data () {
       return {
@@ -297,9 +332,8 @@ export default {
             ],
             swiperOption: {
                 slidesPerView: 'auto',
-                // centeredSlides: true,
                 spaceBetween: 20,
-                slidesPerView: 5,
+                slidesPerView: 4,
                 freeMode: true,
                 loop: false,
                 navigation: {
@@ -313,7 +347,7 @@ export default {
                 breakpoints: {
                   1024: {
                     slidesPerView: 4,
-                    spaceBetween: 20
+                    spaceBetween: 20,
                   },
                   768: {
                     slidesPerView: 3,
@@ -385,11 +419,33 @@ export default {
                 translate: '70'
               }
             ],
+            casos: [
+              {
+                img: caso1,
+                name: 'ana barbara t.',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
+              },
+              {
+                img: caso2,
+                name: 'elizabeth betancurt r.',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
+              },
+              {
+                img: caso3,
+                name: 'vanessa ale g.',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
+              },
+              {
+                img: caso4,
+                name: 'carmen de los angeles',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
+              }
+            ],
             swiperOption2: {
               spaceBetween: 20,
               slidesPerView: 5,
               slidesPerView: 1.1,
-              loop: true,
+              loop: false,
               pagination: {
                   el: '.swiper2-pag',
                   type: 'fraction'
@@ -404,7 +460,7 @@ export default {
                     spaceBetween: 20
                   },
                   768: {
-                    slidesPerView: 3,
+                    slidesPerView: 2.5,
                     spaceBetween: 20
                   },
                   640: {
@@ -412,11 +468,11 @@ export default {
                     spaceBetween: 20
                   },
                   425: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 1.3,
                     spaceBetween: 20
                   },
                   320: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1.1,
                     spaceBetween: 20
                   }
                 }
@@ -443,11 +499,11 @@ export default {
                     spaceBetween: 20
                   },
                   425: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 1.6,
                     spaceBetween: 20
                   },
                   320: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1.3,
                     spaceBetween: 20
                   }
               }
@@ -455,9 +511,9 @@ export default {
             swiperOption4: {
               spaceBetween: 20,
               slidesPerView: 5,
-              loop: true,
+              loop: false,
               pagination: {
-                  el: '.swiper2-pag',
+                  el: '.swiper4-pag',
                   type: 'fraction'
               },
               navigation: {
@@ -470,7 +526,7 @@ export default {
                     spaceBetween: 20
                   },
                   768: {
-                    slidesPerView: 3,
+                    slidesPerView: 2.5,
                     spaceBetween: 20
                   },
                   640: {
@@ -478,7 +534,7 @@ export default {
                     spaceBetween: 20
                   },
                   425: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 1.3,
                     spaceBetween: 20
                   },
                   320: {
@@ -486,6 +542,43 @@ export default {
                     spaceBetween: 20
                   }
               }
+            },
+            swiperOption5: {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                slidesPerView: 5,
+                freeMode: true,
+                loop: false,
+                navigation: {
+                    nextEl: '.swiper5-right',
+                    prevEl: '.swiper5-left'
+                },
+                pagination: {
+                  el: '.swiper5-pag',
+                  type: 'fraction'
+                },
+                breakpoints: {
+                  1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                  },
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                  },
+                  425: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                  },
+                  320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                  }
+                }
             },
       }
   },

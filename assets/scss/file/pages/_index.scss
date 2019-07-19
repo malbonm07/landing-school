@@ -68,3 +68,19 @@
         }
     }
 }
+
+.call-section {
+    color: $text-white;
+    &__premium {
+        background: #4B23F4;
+        &--btn {
+            @include btn-outline(250px, white, white);
+        }
+    }
+    &__empresas {
+        background: #181B33;
+        &--btn {
+            @include btn-outline(250px, white, white);
+        }
+    }
+}

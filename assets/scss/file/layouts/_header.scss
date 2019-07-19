@@ -2,7 +2,7 @@
     color: $text-white;
 }
 .header {
-    height: 75vh;
+    height: 70vh;
     overflow: hidden;
     text-align: center;
     margin: auto;
@@ -44,7 +44,10 @@
         }
         &__button {
             @include btn(85%, #4B22F4,#4B22F4);
-            margin-top: 4rem;
+            margin-top: 2rem;
+            @include tablet {
+                @include btn(250px, #4B22F4,#4B22F4);
+            }
         }
     }
 }
@@ -77,6 +80,7 @@
         h3 {
             margin-bottom: 20px;
             text-align: center;
+            font-weight: $text-title;
         }
     }
 }

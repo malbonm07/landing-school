@@ -103,6 +103,9 @@ $btnheight: 30px;
 .text-space3 {
     letter-spacing: 2px; 
 }
+.text-space4 {
+    letter-spacing: 1.5px;
+}
 
 .text-white{
     color: $text-white;
@@ -122,6 +125,9 @@ $btnheight: 30px;
 }
 .text-right {
     text-align: right;
+}
+.text-left {
+    text-align: left;
 }
 .line-height1 {
     line-height: 1.3rem;
@@ -264,4 +270,34 @@ $btnheight: 30px;
 }
 .pl-5 {
     padding-left: 5rem;
+}
+
+.fluid {
+    width: 100%;
+}
+.block {
+    display: block;
+}
+
+.relativ {
+    position: relative;
+}
+.absolut {
+    position: absolute;
+}
+
+.pa-1 {
+    padding: 1rem;
+}
+.pa-2 {
+    padding: 2rem;
+}
+.pa-3 {
+    padding: 3rem;
+}
+.pa-4 {
+    padding: 4rem;
+}
+.pa-5 {
+    padding: 5rem;
 }
