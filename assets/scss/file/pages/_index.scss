@@ -1,6 +1,29 @@
 .cursos-section {
     margin-bottom: 3rem;
 }
+.cursos-swiper-responsive {
+    @include tablet {
+        display: none;
+    }
+}
+.cursos-grid {
+    display: none;
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-gap: 20px;
+        grid-auto-flow: row;
+    }
+    @include desktop {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    &__item {
+        width: 100%;
+        display: grid;
+        align-items: center;
+        text-align: center;
+    }
+}
 
 .separator-fluid {
     @include separator(100%, $text-grey1);
@@ -76,11 +99,20 @@
         &--btn {
             @include btn-outline(250px, white, white);
         }
+        @include desktop {
+            padding: 4rem 3rem 4rem 3rem;
+        }
     }
     &__empresas {
         background: #181B33;
         &--btn {
             @include btn-outline(250px, white, white);
         }
+        @include desktop {
+            padding: 4rem 3rem 4rem 3rem;
+        }
+    }
+    @include desktop {
+        display: flex;
     }
 }

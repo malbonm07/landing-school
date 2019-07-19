@@ -37,26 +37,34 @@
       </div>
     </section>
     <section class="cursos-section">
-      <div v-swiper:mySwiper="swiperOption" class="swiper-container">
-          <ul class="swiper-wrapper">
-              <li class="swiper-slide" v-for="(course, i) in courses" :key="i">
-                <sliderCard :courseObject="course">
-                </sliderCard>
-              </li>
-          </ul>
-          <div class="swiper-pagination__content">
-            <button
-                class="swiper-button swiper-left"
-            >
-                <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
-            </button>
-            <div class="swiper-pag" slot="pagination"></div>
-            <button
-                class="swiper-button swiper-right"
-            >
-                <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/>
-            </button>
-          </div>
+      <div class="cursos-swiper-responsive">
+        <div v-swiper:mySwiper="swiperOption" class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide" v-for="(course, i) in courses" :key="i">
+                  <sliderCard :courseObject="course">
+                  </sliderCard>
+                </li>
+            </ul>
+            <div class="swiper-pagination__content">
+              <button
+                  class="swiper-button swiper-left"
+              >
+                  <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
+              </button>
+              <div class="swiper-pag" slot="pagination"></div>
+              <button
+                  class="swiper-button swiper-right"
+              >
+                  <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/>
+              </button>
+            </div>
+        </div>
+      </div>
+      <div class="cursos-grid pl-2 pr-2">
+        <div class="cursos-grid__item" v-for="(course, i) in courses" :key="i">
+            <sliderCard :courseObject="course">
+            </sliderCard>
+        </div>
       </div>
       <div class="text-medium text-subtitle1" style="text-align:center; margin-top: 2rem; color: #62D4DD;">
         <a>Explora todo Aquí</a>

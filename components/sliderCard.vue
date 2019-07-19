@@ -44,6 +44,9 @@ export default {
 <style lang="scss">
 .sliderCard {
     &__img {
+        @include tablet {
+            width: 100%;
+        }
         position: relative;
         &--description {
             position: absolute;
@@ -70,9 +73,9 @@ export default {
             }
         }
     }
-    @include desktop {
-        width: 350px;
-    }
+    // @include desktop {
+    //     width: 350px;
+    // }
     &__content {
         display: flex;
         flex-direction: column;
