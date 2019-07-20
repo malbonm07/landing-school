@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="text-medium text-subtitle1 mt-4" style="text-align:center;color: #62D4DD;">
-        <a>Explora todo Aquí</a>
+        <a style="cursor: pointer;">Explora todo Aquí</a>
       </div>
     </section>
     <hr class="separator-fluid">
@@ -132,7 +132,7 @@
                       <h5 class="text-subtitle1 mb-1">Carreras</h5>
                       <p class="text-body1 text-light text-left line-height1 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                      <a class="text-body1">
+                      <a class="text-body1" style="cursor: pointer;">
                         Explorar carreras
                         <span class="text-body1 ml-1"><font-awesome-icon class="chevronIcon" :icon="['fas', 'arrow-right']"/>
                         </span>
@@ -143,7 +143,7 @@
                     <div class="swiper-info__card card2" style="transform: translateY(30px)">
                       <h5 class="text-subtitle1 mb-1">Certificaciones</h5>
                       <p class="text-body1 text-light text-left line-height1 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                      <a class="text-body1">
+                      <a class="text-body1" style="cursor: pointer;">
                         Explorar certificaciones
                         <span class="text-body1 ml-1"><font-awesome-icon class="chevronIcon" :icon="['fas', 'arrow-right']"/>
                         </span>
@@ -154,7 +154,7 @@
                     <div class="swiper-info__card card3">
                       <h5 class="text-subtitle1 mb-1">Cursos</h5>
                       <p class="text-body1 text-light text-left line-height1 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                      <a class="text-body1">
+                      <a class="text-body1" style="cursor: pointer;">
                         Explorar cursos
                         <span class="text-body1 ml-1"><font-awesome-icon class="chevronIcon" :icon="['fas', 'arrow-right']"/>
                         </span>
@@ -648,7 +648,8 @@ export default {
                 slidesPerView: 'auto',
                 spaceBetween: 40,
                 slidesPerView: 2,
-                freeMode: true,
+                centeredSlides: false,
+                freeMode: false,
                 loop: false,
                 navigation: {
                     nextEl: '.swiper5-right',

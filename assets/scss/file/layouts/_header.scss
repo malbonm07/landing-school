@@ -49,6 +49,8 @@
                 @include btn(250px, #4B22F4,#4B22F4);
             }
         }
+        @include desktop {
+        }
     }
 }
 

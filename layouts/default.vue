@@ -2,9 +2,6 @@
   <div class="main__container">
     <nav class="navbar">
       <div class="navbar__block">
-        <div class="navbar__menu">
-          <font-awesome-icon :icon="['fas', 'bars']"/>
-        </div>
         <div class="navbar__search">
           <font-awesome-icon :icon="['fas', 'search']"/>
         </div>
@@ -16,6 +13,15 @@
         <font-awesome-icon :icon="['fas', 'shopping-cart']"/>
       </div>
     </nav>
+    <div class="navbar__menu">
+      <input type="checkbox" id="menu-toggle" @click="show = !show">
+      <label for="menu-toggle" class="menu-toggle-label">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+      <!-- <font-awesome-icon :icon="['fas', 'bars']"/> -->
+    </div>
     <nuxt />
     <footer class="footer">
       <div class="footer__box1">
@@ -96,6 +102,12 @@
         <h6 class="text-grey2 text-regular text-space3" style="text-align: center;">Todos los derechos reservados</h6>
       </div>
     </div>
+    <!-- ################### SIDE-BAR ################### -->
+
+    <div class="side-bar" :class="{'appear-sidebar': show}">
+    </div>
+
+    <!-- ################### END SIDE-BAR ################### -->
   </div>
 </template>
 <!-- <p>Icons</p>
@@ -106,6 +118,11 @@
 <script>
 
 export default {
+  data() {
+    return {
+      show: false
+    }
+  },
   mounted() {
     let dropdownBtn = document.querySelectorAll('.footer__dropdown--title');
     let dropdownList = document.querySelectorAll('.footer__dropdown--list');
