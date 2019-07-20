@@ -304,6 +304,11 @@ import sliderCardImg from '~/components/sliderCardImg.vue'
 import teacherCard from '~/components/teacherCard.vue'
 import casosCard from '~/components/casosCard.vue'
 
+import curso1 from '~/assets/imagens/cursos/img1.jpg'
+import curso2 from '~/assets/imagens/cursos/img2.jpg'
+import curso3 from '~/assets/imagens/cursos/img3.jpg'
+import curso4 from '~/assets/imagens/cursos/img4.jpg'
+
 import img1 from '~/assets/imagens/courses/img1.jpg'
 import img2 from '~/assets/imagens/courses/img2.jpg'
 import img3 from '~/assets/imagens/courses/img3.jpg'
@@ -333,11 +338,11 @@ export default {
       return {
             infoBanner: {
                 img: info1,
-                description: 'Estudia con nosotros y asegura el éxito, haz la diferencia con las habilidades que aprenderás.'
+                description: 'Estudia con nosotros y asegura el éxito, haz la diferencia con las habilidades que aprenderás. Te estamos esperando!'
               },
             courses: [
               {
-                img: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?cs=srgb&dl=casual-college-connection-1438081.jpg&fm=jpg",
+                img: curso1,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 29.99,
@@ -346,7 +351,7 @@ export default {
                 time: "2h 21m"
               },
               {
-                img: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?cs=srgb&dl=casual-college-connection-1438081.jpg&fm=jpg",
+                img: curso2,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 29.99,
@@ -355,7 +360,7 @@ export default {
                 time: "2h 21m"
               },
               {
-                img: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?cs=srgb&dl=casual-college-connection-1438081.jpg&fm=jpg",
+                img: curso3,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 29.99,
@@ -364,7 +369,7 @@ export default {
                 time: "2h 21m"
               },
               {
-                img: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?cs=srgb&dl=casual-college-connection-1438081.jpg&fm=jpg",
+                img: curso4,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 49.99,
@@ -373,7 +378,7 @@ export default {
                 time: "2h 21m"
               },
               {
-                img: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?cs=srgb&dl=casual-college-connection-1438081.jpg&fm=jpg",
+                img: curso1,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 49.99,
@@ -382,7 +387,7 @@ export default {
                 time: "2h 21m"
               },
               {
-                img: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?cs=srgb&dl=casual-college-connection-1438081.jpg&fm=jpg",
+                img: curso2,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 49.99,
@@ -507,7 +512,7 @@ export default {
             infoBanners: [
               {
                 img: info1,
-                description: 'Estudia con nosotros y asegura el éxito, haz la diferencia con las habilidades que aprenderás.'
+                description: 'Estudia con nosotros y asegura el éxito, haz la diferencia con las habilidades que aprenderás. Te estamos esperando!'
               },
               {
                 img: info3,

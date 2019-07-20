@@ -7,12 +7,31 @@
         </div>
       </div>
       <div class="navbar__logo">
-        <div><h1 class="text-h6 text-space1">CREHANA</h1></div>
+        <div><h1 class="text-h6 text-title text-space3">CREHANA</h1></div>
       </div>
       <div class="navbar__buy">
         <font-awesome-icon :icon="['fas', 'shopping-cart']"/>
       </div>
     </nav>
+    <div class="desktop-nav pl-2 pr-2">
+      <div class="desktop-nav__logo">
+        <h2 class="text-space4">CREHANA</h2>
+        <button class="text-white desktop-nav__logo-btn text-body1">Aprende</button>
+        <div class="desktop-nav__line"></div>
+      </div>
+      <div class="desktop-nav__search">
+        <font-awesome-icon :icon="['fas', 'search']"/>
+      </div>
+      <div class="desktop-nav__links">
+        <a>Lives</a>
+        <a>Blog</a>
+        <a>Membresias</a>
+        <div class="desktop-nav__line"></div>
+        <a><font-awesome-icon :icon="['fas', 'shopping-cart']"/></a>
+        <button class="text-white desktop-nav__links-login text-body1">Ingresar</button>
+        <button class="text-white desktop-nav__links-registration text-body1">Regístrate</button>
+      </div>
+    </div>
     <div class="navbar__menu">
       <input type="checkbox" id="menu-toggle" @click="show = !show">
       <label for="menu-toggle" class="menu-toggle-label">
@@ -105,6 +124,32 @@
     <!-- ################### SIDE-BAR ################### -->
 
     <div class="side-bar" :class="{'appear-sidebar': show}">
+      <transition name="fade">
+        <div v-if="show" class="side-bar__logo text-h6 text-center text-title text-space3 text-grey3">CREHANA</div>
+      </transition>
+        <div class="side-bar__content pr-2 pl-2 pb-2">
+          <ul class="side-bar__content-list">
+            <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Cursos<span></span></a></li>
+            <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Lives</a></li>
+            <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Blog</a></li>
+            <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Membresías</a></li>
+            <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Carreras</a></li>
+            <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Certificaciones</a></li>
+          </ul>
+          <button class="btn-registration text-subtitle1 text-white mt-1 mb-1">Regístrate</button>
+          <button class="btn-login text-subtitle1 text-grey mb-1">Iniciar Sesión</button>
+          <div class="side-social">
+            <div class="side-social__icon"><font-awesome-icon :icon="['fab', 'facebook-f']"/></div>
+            <div class="side-social__icon"><font-awesome-icon :icon="['fab', 'twitter']"/></div>
+            <div class="side-social__icon"><font-awesome-icon :icon="['fab', 'instagram']"/></div>
+            <div class="side-social__icon"><font-awesome-icon :icon="['fab', 'linkedin']"/></div>
+            <div class="side-social__icon"><font-awesome-icon :icon="['fab', 'youtube']"/></div>
+          </div>
+          <h6 class="text-body1 text-medium text-center" style="color: #75DAE1;"><a>¿Necesitas ayuda?<br>Aquí te atenderemos</a></h6>
+        </div>
+      <div>
+
+      </div>
     </div>
 
     <!-- ################### END SIDE-BAR ################### -->
