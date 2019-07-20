@@ -11,7 +11,7 @@
     @media (min-width: 1024px) { @content; }
   }
 @mixin lg-desktop {
-    @media (min-width: 1300px) { @content; }
+    @media (min-width: 1330px) { @content; }
   }
 
 @mixin btn($width, $color1, $color2) {
@@ -40,4 +40,15 @@
     width: $width;
     border: 0.5px solid $color;
     margin: auto;
+}
+
+@mixin swiper-mobile-btn {
+    font-size: 18px;
+    color: #4B22F4;
+    border: none;
+    outline: none;
+    margin: 0 15px 0 15px;
+    &:hover {
+        cursor: pointer;
+    }
 }

@@ -47,13 +47,13 @@
             </ul>
             <div class="swiper-pagination__content">
               <button
-                  class="swiper-button swiper-left"
+                  class="swiper1-button swiper-left"
               >
                   <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
               </button>
               <div class="swiper-pag" slot="pagination"></div>
               <button
-                  class="swiper-button swiper-right"
+                  class="swiper1-button swiper-right"
               >
                   <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/>
               </button>
@@ -66,7 +66,7 @@
             </sliderCard>
         </div>
       </div>
-      <div class="text-medium text-subtitle1" style="text-align:center; margin-top: 2rem; color: #62D4DD;">
+      <div class="text-medium text-subtitle1 mt-4" style="text-align:center;color: #62D4DD;">
         <a>Explora todo Aquí</a>
       </div>
     </section>
@@ -83,11 +83,14 @@
         </ul>
       </div>
     </section>
-    <section class="lanza-section mt-4">
+    <section class="lanza-section mt-4 relative">
       <div class="lanza-section__title">
         <div class="lanza-section__title-flex line-height3">
           <p class="text-caption text-regular pt-2">ENTÉRATE DE LO ÚLTIMO</p>
-          <h4 class="text-h4 pb-2">Lanzamientos recientes</h4>
+          <h4 class="text-h4 text-title pb-2">Lanzamientos recientes</h4>
+          <button class="lanza-btn text-body1 text-white">
+            Click Aquí
+          </button>
         </div>
       </div>
       <div class="lanza-section__swiper">
@@ -100,13 +103,13 @@
             </ul>
             <div class="swiper-pagination__content">
               <button
-                  class="swiper-button swiper2-left"
+                  class="swiper2-button swiper2-left"
               >
                   <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
               </button>
               <div class="swiper2-pag" slot="pagination"></div>
               <button
-                  class="swiper-button swiper2-right"
+                  class="swiper2-button swiper2-right"
               >
                   <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/>
               </button>
@@ -114,6 +117,7 @@
         </div>
       </div>
     </section>
+    <div class="spacer"></div>
     <section class="lanza-section-info mt-4">
       <div class="lanza-section-info__flex">
         <div class="lanza-section-info__description">
@@ -174,30 +178,65 @@
           </div>   
         </div>
       </div>
+      <div class="lanza-desktop">
+        <div class="lanza-desktop__text-container pl-2">
+          <p class="text-grey1 text-caption mb-1">ELIGE TU PROPIO CAMINO</p>
+          <button class="btn-info text-medium text-grey1" 
+          @click="infoBanner=infoBanners[0]"
+          :class="{'active-btn' : infoBanner === infoBanners[0]}"
+          >
+          Carreras
+          </button>
+          <button class="btn-info text-medium text-grey1" 
+          @click="infoBanner=infoBanners[1]"
+          :class="{'active-btn' : infoBanner === infoBanners[1]}"
+          >
+          Certificaciones
+          </button>
+          <button class="btn-info text-medium text-grey1" 
+          @click="infoBanner=infoBanners[2]"
+          :class="{'active-btn' : infoBanner === infoBanners[2]}"
+          >
+          Cursos
+          </button>
+        </div>
+        <div class="lanza-desktop__board">
+          <div class="lanza-desktop__board-box pt-1 pb-1">
+            <p class="text-h6 pl-2 pr-5 mb-1 text-light">{{infoBanner.description}}</p>
+            <a class="text-subtitle1 text-medium ml-2 mr-5">
+              Explorar Cursos<span style="padding-left: 8px;"><font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/></span>
+              </a>
+            <div class="lanza-desktop__board-box-img">
+              <img :src="infoBanner.img" alt="Imagen de referencia" width="100%">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="exp-section mt-4">
       <div>
-        <div>
+        <div class="exp-section__title">
+          <span class="subtitle-desktop text-caption pl-4 line-height3 text-grey1">NUESTROS PROFESORES</span>
           <h4 class="text-h4 text-title text-center pl-1 pr-1 mb-2">Los mejores expertos de Latinoamerica</h4>
           <p class="text-subtitle1 text-center pl-1 pr-1 mb-3">Los mejores expertos de la industria que guiaran tu aprendizaje te comunicarán lo mejor de sus experiencias.</p>
         </div>
-        <div>
+        <div class="exp-section__swiper">
           <div v-swiper:mySwiper4="swiperOption4" class="swiper-container">
               <ul class="swiper-wrapper">
                   <li class="swiper-slide" v-for="(teacher, index) in teachers" :key="index">
-                    <teacherCard :dataObject="teacher">
+                    <teacherCard :dataObject="teacher" :style="`transform: translateY(${teacher.translate}px)`">
                     </teacherCard>
                   </li>
               </ul>
-              <div class="swiper-pagination__content">
+              <div class="swiper-pagination__content exp-section__swiper4-btn-desktop">
                 <button
-                    class="swiper-button swiper4-left"
+                    class="swiper4-button swiper4-left"
                 >
                     <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
                 </button>
                 <div class="swiper4-pag" slot="pagination"></div>
                 <button
-                    class="swiper-button swiper4-right"
+                    class="swiper4-button swiper4-right"
                 >
                     <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/>
                 </button>
@@ -207,10 +246,10 @@
       </div>
     </section>
     <section class="casos-section mt-4 mb-4">
-      <div>
-        <h4 class="text-h4 text-title text-center pl-1 pr-1 mb-2">Nuestros casos de éxito</h4>
+      <div class="casos-section__title">
+        <h4 class="text-h4 text-title pl-1 pr-1 mb-2">Nuestros casos de éxito</h4>
       </div>
-      <div>
+      <div class="casos-section__swiper">
         <div v-swiper:mySwipe5="swiperOption5" class="swiper-container">
             <ul class="swiper-wrapper">
                 <li class="swiper-slide" v-for="(caso, i) in casos" :key="i">
@@ -218,21 +257,27 @@
                   </casosCard>
                 </li>
             </ul>
-            <div class="swiper-pagination__content">
+            <div class="swiper-pagination__content casos-btn-box">
               <button
-                  class="swiper-button swiper5-left"
+                  class="swiper5-button swiper5-left"
               >
                   <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
               </button>
               <div class="swiper5-pag" slot="pagination"></div>
               <button
-                  class="swiper-button swiper5-right"
+                  class="swiper5-button swiper5-right"
               >
                   <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/>
               </button>
             </div>
         </div>
       </div>
+      <!-- <div class="casos-grid">
+        <div class="casos-grid__item" v-for="(caso, i) in casos" :key="i">
+            <casosCard :casoObject="caso">
+            </casosCard>    
+        </div>
+      </div> -->
     </section>
     <section class="call-section">
       <div class="call-section__premium pl-1 pr-1 pt-3 pb-3">
@@ -273,6 +318,10 @@ import caso2 from '~/assets/imagens/casos/img2.jpg'
 import caso3 from '~/assets/imagens/casos/img3.jpg'
 import caso4 from '~/assets/imagens/casos/img4.jpg'
 
+import info1 from '~/assets/imagens/info-images/img1.jpg'
+import info2 from '~/assets/imagens/info-images/img2.jpg'
+import info3 from '~/assets/imagens/info-images/img3.jpg'
+
 export default {
   components: {
     sliderCard,
@@ -282,6 +331,10 @@ export default {
   },
   data () {
       return {
+            infoBanner: {
+                img: info1,
+                description: 'Estudia con nosotros y asegura el éxito, haz la diferencia con las habilidades que aprenderás.'
+              },
             courses: [
               {
                 img: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?cs=srgb&dl=casual-college-connection-1438081.jpg&fm=jpg",
@@ -425,7 +478,45 @@ export default {
                 title: 'Patricia Lombardi',
                 description: 'Comic Artist',
                 translate: '70'
+              },
+              {
+                img: teacher1,
+                title: 'Roe Zambrano',
+                description: 'Sr account manager',
+                translate: '20'
+              },
+              {
+                img: teacher4,
+                title: 'Arturo Aragon',
+                description: 'Fotografo',
+                translate: '30'
+              },
+              {
+                img: teacher1,
+                title: 'Pia Valdivia',
+                description: 'Colorista',
+                translate: '50'
+              },
+              {
+                img: teacher3,
+                title: 'Patricia Lombardi',
+                description: 'Comic Artist',
+                translate: '70'
               }
+            ],
+            infoBanners: [
+              {
+                img: info1,
+                description: 'Estudia con nosotros y asegura el éxito, haz la diferencia con las habilidades que aprenderás.'
+              },
+              {
+                img: info3,
+                description: 'Contamos con packs de cursos complementarios que te ayudarán a profundizar y especializarte en lo que más te apasiona.'
+              },
+              {
+                img: info2,
+                description: 'Contamos con cursos en diversas categorías y niveles para que aprendas desde cero o complementes tus habilidades junto a expertos de la industria.'
+              },
             ],
             casos: [
               {
@@ -451,8 +542,7 @@ export default {
             ],
             swiperOption2: {
               spaceBetween: 20,
-              slidesPerView: 5,
-              slidesPerView: 1.1,
+              slidesPerView: 2.2,
               loop: false,
               pagination: {
                   el: '.swiper2-pag',
@@ -464,8 +554,12 @@ export default {
               },
               breakpoints: {
                   1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 20
+                    slidesPerView: 2.3,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.swip2-right',
+                        prevEl: '.swip2-left'
+                    },
                   },
                   768: {
                     slidesPerView: 2.5,
@@ -487,15 +581,14 @@ export default {
             },
             swiperOption3: {
               spaceBetween: 20,
-              slidesPerView: 5,
-              slidesPerView: 1.3,
+              slidesPerView: 3,
               pagination: {
                   el: '.swiper3-pag',
                   type: 'fraction'
               },
               breakpoints: {
                   1024: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 20
                   },
                   768: {
@@ -517,8 +610,8 @@ export default {
               }
             },
             swiperOption4: {
-              spaceBetween: 20,
-              slidesPerView: 5,
+              spaceBetween: 40,
+              slidesPerView: 4,
               loop: false,
               pagination: {
                   el: '.swiper4-pag',
@@ -553,8 +646,8 @@ export default {
             },
             swiperOption5: {
                 slidesPerView: 'auto',
-                spaceBetween: 20,
-                slidesPerView: 5,
+                spaceBetween: 40,
+                slidesPerView: 2,
                 freeMode: true,
                 loop: false,
                 navigation: {
@@ -567,15 +660,15 @@ export default {
                 },
                 breakpoints: {
                   1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 20
+                    slidesPerView: 2,
+                    spaceBetween: 40
                   },
                   768: {
                     slidesPerView: 2,
                     spaceBetween: 20
                   },
                   640: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 20
                   },
                   425: {

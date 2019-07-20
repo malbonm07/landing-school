@@ -22,7 +22,7 @@ export default {
         dataObject: {
             type: Object,
             required: true
-        } 
+        }
     }
 }
 </script>
@@ -57,7 +57,7 @@ export default {
     &:hover {
         cursor: pointer;
         .center {
-            transform: translateX(-30%);
+            // transform: translateX(-30%);
             transform: scale(1.2);
         }
         .card-img__content {

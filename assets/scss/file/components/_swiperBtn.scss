@@ -8,18 +8,7 @@
     .swiper-pag {
         width: auto;
     }
-    .swiper-button {
-        font-size: 18px;
-        color: #4B22F4;
-        border: none;
-        outline: none;
-        margin: 0 15px 0 15px;
-        &:hover {
-            cursor: pointer;
-        }
-    }
 }
-
 
 .swiper-info__card {
     padding: 25px;
@@ -38,4 +27,28 @@
 }
 .swiper5-pag {
     width: auto !important;
+}
+
+
+.swiper1-button {
+    @include swiper-mobile-btn;
+}
+.swiper2-button {
+    @include swiper-mobile-btn;
+    @include desktop {
+        border: 1px solid #4B22F4;
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+.swiper4-button {
+    @include swiper-mobile-btn;
+    @include desktop {
+        border: 1px solid #4B22F4;
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+.swiper5-button {
+    @include swiper-mobile-btn;
 }

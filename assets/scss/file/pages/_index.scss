@@ -1,5 +1,5 @@
 .cursos-section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 .cursos-swiper-responsive {
     @include tablet {
@@ -11,7 +11,7 @@
     @include tablet {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        grid-gap: 20px;
+        grid-gap: 32px;
         grid-auto-flow: row;
     }
     @include desktop {
@@ -34,19 +34,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
     @include desktop {
+        .stats-title {
+            // margin-bottom: 3rem;
+            font-size: $text-h3;
+        }
+    }
+    @include lg-desktop {
         flex-direction: row;
-        margin: 3rem auto 0rem auto;
+        margin: 5rem auto 5rem auto;
         width: 95%;
         .stats-title {
             font-size: $text-h3;
+            // margin-bottom: 0rem;
         }
     }
     .stats-title {
         width: 98%;
     }
     .stats-list {
+        margin-top: 3rem;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -61,6 +69,9 @@
             @include desktop {
                 margin-top: 0;
             }
+        }
+        @include lg-desktop {
+            margin-top: 0rem;
         }
     }
 }
@@ -82,34 +93,206 @@
             bottom: 0;
             background: #4B23F4;
             z-index: -1;
+            @include desktop {
+                width: 60%;
+                height: 350px;
+            }
         }
         &--flex {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: auto;
+        }
+        @include desktop {
+            text-align: left;
+            padding-left: 2rem;
+            padding-right: 70%;
+        }
+        .lanza-btn {
+            display: none;
+            @include desktop {
+                display: block;
+                @include btn-outline(180px, white, white)
+            }
+        }
+    }
+    &__swiper {
+        @include desktop {
+            position: absolute;
+            width: 55%;
+            margin-left: 45%;
+            transform: translateY(-200px)
+        }
+        @include lg-desktop {
+            transform: translateY(-150px)
         }
     }
 }
+
+.spacer {
+    display: none;
+    @include desktop {
+        display: block;
+        height: 330px;
+    }
+}
+
+.lanza-section-info {
+    &__flex {
+        @include desktop {
+            display: none;
+        }
+    }
+    // &__flex-desktop {
+    //     display: none;
+    //     @include desktop {
+    //         display: flex;
+    //     }
+    // }
+}
+
+.lanza-desktop {
+    display: none;
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15rem;
+        margin-bottom: 8rem;
+        margin-top: 8rem;
+        &__text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-right: 10rem;
+            .btn-info {
+                border: none;
+                padding: 10px 0 10px 0;
+                font-size: 40px;
+                background: none;
+                outline: none;
+                border-bottom: 2px solid transparent;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .active-btn {
+                border-color: #4B24F4;
+                color: #4B24F4;
+            }
+        }
+        &__board {
+            // margin-right: 7rem;
+            &-box {
+                position: relative;
+                width: 300px;
+                height: 310px;
+                line-height: 1.8rem;
+                padding-top: 1rem;
+                color: white;
+                background: #4B23F4;
+                a {
+                    border-bottom: 1.5px solid white;
+                    padding-bottom: 4px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                 }
+                &-img {
+                    width: 280px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translate(210px, 180px)
+                }
+            }
+        }
+    }
+}
+
+.exp-section {
+    @include desktop {
+        &__title {
+            width: 500px;
+            h4 {
+                padding-left: 4rem;
+                text-align: left;
+                line-height: 3rem;
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+}
+.subtitle-desktop {
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
+.exp-section__swiper {
+    @include desktop {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.exp-section__swiper4-btn-desktop {
+    margin-top: 5rem;
+}
+
+.casos-section__title {
+    @include desktop {
+        padding-left: 4rem;
+        padding-bottom: 2rem;
+    }
+}
+.casos-section__swiper {
+    @include desktop {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.casos-btn-box {
+    @include desktop {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+    }
+}
+
 
 .call-section {
     color: $text-white;
     &__premium {
         background: #4B23F4;
+        padding-right: 9rem; 
         &--btn {
-            @include btn-outline(250px, white, white);
+            @include btn-outline(180px, white, white);
+        }
+        @include tablet {
+            padding: 4rem 18rem 4rem 4rem;
         }
         @include desktop {
-            padding: 4rem 3rem 4rem 3rem;
+            padding: 6rem;
         }
     }
     &__empresas {
         background: #181B33;
+        padding-right: 4rem; 
         &--btn {
-            @include btn-outline(250px, white, white);
+            @include btn-outline(180px, white, white);
+        }
+        @include tablet {
+            padding: 4rem 18rem 4rem 4rem;
         }
         @include desktop {
-            padding: 4rem 3rem 4rem 3rem;
+            padding: 6rem;
         }
     }
     @include desktop {

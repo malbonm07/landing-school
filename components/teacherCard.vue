@@ -1,7 +1,7 @@
 <template>
     <div class="card-img">
         <div class="card-img__img">
-            <img :src="dataObject.img" alt="Couse" class="center">
+            <img :src="dataObject.img" alt="teacher image" class="center">
         </div>
         <div class="card-img__content">
             <p class="card-img__content--title capitalize text-medium">{{dataObject.title}}</p>
@@ -21,21 +21,21 @@ export default {
         dataObject: {
             type: Object,
             required: true
-        } 
+        }
     }
 }
 </script>
 
 <style lang="scss">
 .card-img {
-    height: 400px;
+    // height: 400px;
     transition: 2s;
     overflow: hidden;
     &--img {
         position: relative;
     }
     .center {
-        transform: translateX(-15%);
+        transform: translateX(-18%);
         transition: transform 0.3s;
     }
     &__content {
@@ -45,6 +45,7 @@ export default {
         color: white;
         transition: transform .2s;
         transform: translateY(40px);
+        z-index: 20;
         &--title {
             font-size: $text-h6;
             margin-bottom: 0.5rem;
