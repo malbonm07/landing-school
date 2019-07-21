@@ -17,42 +17,44 @@
       <div class="desktop-nav__logo">
         <h2 class="text-space4">CREHANA</h2>
         <div class="logo-btn__appear-menu">
-          <button class="text-white desktop-nav__logo-btn text-body1">
+          <button class="text-white desktop-nav__logo-btn text-body1" @click="showAprendeTabs = !showAprendeTabs">
             Aprende
           </button>
-          <div class="aprende-tab-menu">
-            <div class="aprende-tab-menu__header">
-              <button
-                class="aprende-tab__btn" 
-                @click="currentAprendeTab = tabs[0]">
-                <span><font-awesome-icon :icon="['fas', 'book']"/></span>
-                Cursos
-              </button>
-              <button
-                class="aprende-tab__btn" 
-                @click="currentAprendeTab = tabs[1]">
-                <span><font-awesome-icon :icon="['fas', 'chalkboard']"/></span>
-                Carreras
-              </button>
-              <button
-                class="aprende-tab__btn" 
-                @click="currentAprendeTab = tabs[2]">
-                <span><font-awesome-icon :icon="['fas', 'certificate']"/></span>
-                Certificaciones
-              </button>
+          <transition name="tabs">
+            <div v-if="showAprendeTabs" class="aprende-tab-menu">
+              <div class="aprende-tab-menu__header">
+                <button
+                  class="aprende-tab__btn text-body1 mr-4" 
+                  @click="currentAprendeTab = tabs[0]">
+                  <span><font-awesome-icon :icon="['fas', 'book']"/></span>
+                  Cursos
+                </button>
+                <button
+                  class="aprende-tab__btn text-body1" 
+                  @click="currentAprendeTab = tabs[1]">
+                  <span><font-awesome-icon :icon="['fas', 'chalkboard']"/></span>
+                  Carreras
+                </button>
+                <button
+                  class="aprende-tab__btn text-body1 ml-4" 
+                  @click="currentAprendeTab = tabs[2]">
+                  <span><font-awesome-icon :icon="['fas', 'certificate']"/></span>
+                  Certificaciones
+                </button>
+              </div>
+              <div class="aprende-tab-menu__banner">
+                <keep-alive>
+                  <component v-bind:is='currentAprendeTabComponent'>
+                  </component>
+                </keep-alive>
+              </div>
+              <div class="aprende-tab-menu__aside">
+                <button>
+                  Ver Promociones
+                </button>
+              </div>
             </div>
-            <div class="aprende-tab-menu__banner">
-              <keep-alive>
-                <component v-bind:is='currentAprendeTabComponent'>
-                </component>
-              </keep-alive>
-            </div>
-            <div class="aprende-tab-menu__aside">
-              <button>
-                Ver Promociones
-              </button>
-            </div>
-          </div>
+          </transition>
         </div>
         <div class="desktop-nav__line"></div>
       </div>
@@ -217,7 +219,8 @@ export default {
         'cursos',
         'carreras',
         'certificaciones'
-      ]
+      ],
+      showAprendeTabs: false
     }
   },
   mounted() {

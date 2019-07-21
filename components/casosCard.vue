@@ -14,17 +14,6 @@
                     <span style="margin-left:20px;">{{casoObject.name}}</span>
                 </h5>
             </div>
-            <!-- <h3 class="text-subtitle1 text-center mt-1 mb-1">{{courseObject.title}}</h3>
-            <p class="text-grey2 text-body1 capitalize"><span></span>{{courseObject.nivel}}</p>
-            <p class="line-height3">
-                <span style="color: red;" class="text-h6">S/&nbsp;</span>
-                <span style="color: red;" class="text-h6">{{courseObject.precio}}</span>
-                <strike style="margin-left: 10px;">S/199.99</strike>
-            </p>
-            <button class="btn--content text-body1 text-medium">
-                <span><font-awesome-icon :icon="['fas', 'shopping-cart']"/></span>
-                Añadir al carrito
-            </button> -->
         </div>
     </div>
 </template>

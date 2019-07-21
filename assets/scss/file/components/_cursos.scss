@@ -1,0 +1,18 @@
+.cursos-tabContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__lists {
+        width: 85%;
+        height: 85%;
+        display: flex;
+        a {
+            &:hover {
+                cursor: pointer;
+                color: black;
+            }
+        }
+    }
+}
