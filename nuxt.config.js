@@ -23,6 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
+    'swiper/dist/css/swiper.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -56,7 +57,6 @@ export default {
   styleResources: {
     scss: [
       './assets/scss/file/main.scss',
-      'swiper/dist/css/swiper.css'
       // './assets/abstracts/_mixins.scss' // use underscore "_" & also file extension ".scss"
       ]
   },
@@ -70,6 +70,7 @@ export default {
   ** Build configuration
   */
   build: {
+    // analyze: true,
     /*
     ** You can extend webpack config here
     */

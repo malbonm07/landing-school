@@ -232,6 +232,40 @@
           cursor: pointer;
         }
       }
+      .logo-btn__appear-menu {
+        position: relative;
+        color: $text-grey3;
+        .aprende-tab-menu {
+          position: absolute;
+          display: grid;
+          grid-template-columns: 70% 30%;
+          grid-template-rows: 70px 530px;
+          background: white;
+          width: 900px;
+          height: 600px;
+          top: 0;
+          left: 0;
+          z-index: 30;
+          &__header {
+            width: 100%;
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            background: red;
+          }
+          &__banner {
+            width: 100%;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            background: green;
+          }
+          &__aside {
+            width: 100%;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            background: blue;
+          }
+        }
+      }
     }
     &__search {
       margin-left: 2rem;

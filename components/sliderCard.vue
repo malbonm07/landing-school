@@ -73,9 +73,6 @@ export default {
             }
         }
     }
-    // @include desktop {
-    //     width: 350px;
-    // }
     &__content {
         display: flex;
         flex-direction: column;

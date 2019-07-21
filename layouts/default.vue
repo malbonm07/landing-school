@@ -16,7 +16,44 @@
     <div class="desktop-nav pl-2 pr-2">
       <div class="desktop-nav__logo">
         <h2 class="text-space4">CREHANA</h2>
-        <button class="text-white desktop-nav__logo-btn text-body1">Aprende</button>
+        <div class="logo-btn__appear-menu">
+          <button class="text-white desktop-nav__logo-btn text-body1">
+            Aprende
+          </button>
+          <div class="aprende-tab-menu">
+            <div class="aprende-tab-menu__header">
+              <button
+                class="aprende-tab__btn" 
+                @click="currentAprendeTab = tabs[0]">
+                <span><font-awesome-icon :icon="['fas', 'book']"/></span>
+                Cursos
+              </button>
+              <button
+                class="aprende-tab__btn" 
+                @click="currentAprendeTab = tabs[1]">
+                <span><font-awesome-icon :icon="['fas', 'chalkboard']"/></span>
+                Carreras
+              </button>
+              <button
+                class="aprende-tab__btn" 
+                @click="currentAprendeTab = tabs[2]">
+                <span><font-awesome-icon :icon="['fas', 'certificate']"/></span>
+                Certificaciones
+              </button>
+            </div>
+            <div class="aprende-tab-menu__banner">
+              <keep-alive>
+                <component v-bind:is='currentAprendeTabComponent'>
+                </component>
+              </keep-alive>
+            </div>
+            <div class="aprende-tab-menu__aside">
+              <button>
+                Ver Promociones
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="desktop-nav__line"></div>
       </div>
       <div class="desktop-nav__search">
@@ -162,10 +199,25 @@
 <font-awesome-icon :icon="['fas', 'shopping-cart']"/> -->
 <script>
 
+import cursosTab from '~/components/aprende-tabs/cursos.vue'
+import carrerasTab from '~/components/aprende-tabs/carreras.vue'
+import certificacionesTab from '~/components/aprende-tabs/certificaciones.vue'
+
 export default {
+  components: {
+    cursosTab,
+    carrerasTab,
+    certificacionesTab
+  },
   data() {
     return {
-      show: false
+      show: false,
+      currentAprendeTab: 'cursos',
+      tabs: [
+        'cursos',
+        'carreras',
+        'certificaciones'
+      ]
     }
   },
   mounted() {
@@ -181,7 +233,12 @@ export default {
         btnIcon.classList.toggle('activeChevron')
       })
     })
-
+  },
+  computed: {
+    currentAprendeTabComponent() {
+      return `${this.currentAprendeTab}Tab`;
+      console.log(this.currentAprendeTab);
+    }
   }
 }
 </script>
