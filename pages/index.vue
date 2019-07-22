@@ -48,6 +48,7 @@
 
     <!--------------------------- CURSOS SECTION ------------------------------>
     <section class="cursos-section">
+      <div class="text-h4 text-title mt-4 mb-4 text-center"><h2>¿Qué deseas aprender hoy?</h2></div>
       <div class="cursos-swiper-responsive">
         <div v-swiper:mySwiper="swiperOption" class="swiper-container">
             <ul class="swiper-wrapper">

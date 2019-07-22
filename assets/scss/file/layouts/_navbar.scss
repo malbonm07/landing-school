@@ -224,6 +224,7 @@
               border: none;
               outline: none;
               transition: all .2s ease-out;
+              background: transparent;
               &:hover {
                 cursor: pointer;
                 background: rgba(75,35,244,0.2);
@@ -253,8 +254,10 @@
             }
             &__btn {
               @include btn(100%, #4B23F4, #4B23F4);
+              transition: all .2s ease-out;
               &:hover {
                 cursor: pointer;
+                background: #5CCBD1;
               }
             }
           }

@@ -39,6 +39,11 @@
         border: 1px solid #4B22F4;
         padding: 20px;
         font-size: 14px;
+        transition: all .18s ease-out;
+        &:hover {
+            background: #4B22F4;
+            color: white;
+        }
     }
 }
 .swiper4-button {
@@ -47,6 +52,11 @@
         border: 1px solid #4B22F4;
         padding: 20px;
         font-size: 14px;
+        transition: all .18s ease-out;
+        &:hover {
+            background: #4B22F4;
+            color: white;
+        }
     }
 }
 .swiper5-button {

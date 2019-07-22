@@ -47,10 +47,15 @@
             line-height: 1.5rem;
         }
         &__button {
-            @include btn(85%, #4B22F4,#4B22F4);
+            transition: all .18s ease-out;
+            @include btn(85%, #4B22F4, #5CCBD1);
             margin-top: 2rem;
             @include tablet {
-                @include btn(250px, #4B22F4,#4B22F4);
+                @include btn(250px, #4B22F4, #5CCBD1);
+            }
+            @include tablet {
+                @include btn(250px, #4B22F4, #5CCBD1);
+                font-weight: bold;
             }
         }
     }

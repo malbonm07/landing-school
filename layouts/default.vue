@@ -278,7 +278,7 @@ export default {
     }
   },
   mounted() {
-    
+
     let dropdownBtn = document.querySelectorAll('.footer__dropdown--title');
     let dropdownList = document.querySelectorAll('.footer__dropdown--list');
     const dropdownBtnArray = Array.from(dropdownBtn)
