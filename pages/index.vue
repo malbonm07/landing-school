@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+
+
+    <!--------------------------- HEADER ------------------------------>
     <header class="header header__container">
       <div class="header__video">
         <video src="~/assets/video/internet.mp4" muted autoplay="true" loop="true"></video>
@@ -13,6 +16,10 @@
         </button>
       </div>
     </header>
+    <!--------------------------- END HEADER ------------------------------>
+    
+
+    <!--------------------------- SUB-HEADER ------------------------------>
     <section class="sub-header">
       <div class="sub-header__item">
         <div class="sub-header__item--icon text-center">
@@ -36,12 +43,16 @@
         <p>Cursos las 24h sin caducidad</p>
       </div>
     </section>
+    <!--------------------------- END SUB-HEADER ------------------------------>
+
+
+    <!--------------------------- CURSOS SECTION ------------------------------>
     <section class="cursos-section">
       <div class="cursos-swiper-responsive">
         <div v-swiper:mySwiper="swiperOption" class="swiper-container">
             <ul class="swiper-wrapper">
                 <li class="swiper-slide" v-for="(course, i) in courses" :key="i">
-                  <sliderCard :courseObject="course">
+                  <sliderCard :courseObject="course" :promo="course.promo">
                   </sliderCard>
                 </li>
             </ul>
@@ -62,7 +73,7 @@
       </div>
       <div class="cursos-grid pl-2 pr-2">
         <div class="cursos-grid__item" v-for="(course, i) in courses" :key="i">
-            <sliderCard :courseObject="course">
+            <sliderCard :courseObject="course" :promo="course.promo">
             </sliderCard>
         </div>
       </div>
@@ -70,7 +81,13 @@
         <a style="cursor: pointer;">Explora todo Aquí</a>
       </div>
     </section>
+    <!--------------------------- END CURSOS SECTION ------------------------------>
+
+
     <hr class="separator-fluid">
+
+
+    <!--------------------------- STATS SECTION ------------------------------>
     <section class="stats-section">
       <div class="stats-flex">
         <div class="stats-title text-h4 text-medium text-center">
@@ -83,12 +100,16 @@
         </ul>
       </div>
     </section>
+    <!--------------------------- END STATS SECTION ------------------------------>
+
+
+    <!--------------------------- LANZAMIENTOS SECTION ------------------------------>
     <section class="lanza-section mt-4 relative">
       <div class="lanza-section__title">
         <div class="lanza-section__title-flex line-height3">
           <p class="text-caption text-regular pt-2">ENTÉRATE DE LO ÚLTIMO</p>
           <h4 class="text-h4 text-title pb-2">Lanzamientos recientes</h4>
-          <button class="lanza-btn text-body1 text-white">
+          <button class="lanza-btn text-body1 text-white text-medium">
             Click Aquí
           </button>
         </div>
@@ -118,6 +139,10 @@
       </div>
     </section>
     <div class="spacer"></div>
+    <!--------------------------- END LANZAMIENTOS SECTION ------------------------------>
+
+
+    <!--------------------------- LANZAMIENTOS INFO ------------------------------>
     <section class="lanza-section-info mt-4">
       <div class="lanza-section-info__flex">
         <div class="lanza-section-info__description">
@@ -213,6 +238,10 @@
         </div>
       </div>
     </section>
+    <!--------------------------- END LANZAMIENTOS INFO ------------------------------>
+
+
+    <!--------------------------- EXP-SECTION ------------------------------>
     <section class="exp-section mt-4">
       <div>
         <div class="exp-section__title">
@@ -245,6 +274,10 @@
         </div>
       </div>
     </section>
+    <!--------------------------- END EXP-SECTION ------------------------------>
+
+
+    <!--------------------------- CASOS SECTION ------------------------------>
     <section class="casos-section mt-4 mb-4">
       <div class="casos-section__title">
         <h4 class="text-h4 text-title pl-1 pr-1 mb-2">Nuestros casos de éxito</h4>
@@ -279,6 +312,10 @@
         </div>
       </div> -->
     </section>
+    <!--------------------------- END CASOS SECTION ------------------------------>
+
+
+    <!--------------------------- CALL SECTION ------------------------------>
     <section class="call-section">
       <div class="call-section__premium pl-1 pr-1 pt-3 pb-3">
         <span class="text-caption mb-1 block">PREMIUM</span>
@@ -289,12 +326,15 @@
       </div>
       <div class="call-section__empresas pl-1 pr-1 pt-3 pb-3">
         <span class="text-caption mb-1 block">EMPRESAS</span>
-        <h4 class="text-h4 text-title mb-2">Potencia el talento de tu equipo con nuestros planes</h4>
+        <h4 class="text-h4 text-title mb-2">Potencia el talento de tu equipo con nuestros planes.</h4>
         <button class="call-section__empresas--btn text-body1 text-white text-medium text-space4">
           Entérate más
         </button>
       </div>
     </section>
+    <!--------------------------- END CALL SECTION ------------------------------>
+
+
   </div>
 </template>
 
@@ -345,19 +385,21 @@ export default {
                 img: curso1,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
-                precio: 29.99,
+                precio: 160.99,
                 link: "null",
                 students: "176",
-                time: "2h 21m"
+                time: "2h 21m",
+                promo: true
               },
               {
                 img: curso2,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
-                precio: 29.99,
+                precio: 160.99,
                 link: "null",
                 students: "176",
-                time: "2h 21m"
+                time: "2h 21m",
+                promo: true
               },
               {
                 img: curso3,
@@ -366,7 +408,8 @@ export default {
                 precio: 29.99,
                 link: "null",
                 students: "176",
-                time: "2h 21m"
+                time: "2h 21m",
+                promo: false
               },
               {
                 img: curso4,
@@ -375,7 +418,8 @@ export default {
                 precio: 49.99,
                 link: "null",
                 students: "176",
-                time: "2h 21m"
+                time: "2h 21m",
+                promo: false
               },
               {
                 img: curso1,
@@ -384,7 +428,8 @@ export default {
                 precio: 49.99,
                 link: "null",
                 students: "176",
-                time: "2h 21m"
+                time: "2h 21m",
+                promo: false
               },
               {
                 img: curso2,
@@ -393,7 +438,8 @@ export default {
                 precio: 49.99,
                 link: "null",
                 students: "176",
-                time: "2h 21m"
+                time: "2h 21m",
+                promo: false
               },
             ],
             swiperOption: {

@@ -3,7 +3,7 @@
 }
 .header {
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     overflow: hidden;
     text-align: center;
     margin: auto;
@@ -36,6 +36,9 @@
             line-height: 3rem;
             margin-top: 2rem;
             margin-bottom: 2rem;
+            @include tablet {
+                font-size: $text-h2;
+            }
             @include desktop {
                 font-size: $text-h2;
             }
@@ -48,6 +51,21 @@
             margin-top: 2rem;
             @include tablet {
                 @include btn(250px, #4B22F4,#4B22F4);
+            }
+        }
+    }
+    @include tablet {
+        &__box {
+            align-items: flex-start;
+            text-align: left;
+            padding-left: 5%;
+            h1 {
+                font-size: 64px;
+                line-height: 4.5rem;
+                margin-right: 20%;
+            }
+            p {
+                font-size: 20px;
             }
         }
     }
@@ -74,7 +92,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    @include tablet-landscape {
+    @include tablet {
         flex-direction: row;
         justify-content: space-around;
         margin: 2rem auto 2rem auto;

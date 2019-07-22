@@ -1,9 +1,20 @@
+@import './base/variables';
 @import './base/base';
+@import './transitions/transitions';
 @import './mixins/mixins';
-@import './layouts/navbar';
-@import './layouts/header';
-@import './layouts/footer';
+
+@import './components/casosCard';
+@import './components/sliderCard';
+@import './components/sliderCardImg';
+@import './components/teacherCard';
+
+
 @import './components/swiperBtn';
 @import './components/cursos';
 @import './components/carreras';
+@import './components/certificaciones';
+
+@import './layouts/navbar';
+@import './layouts/header';
+@import './layouts/footer';
 @import './pages/index';

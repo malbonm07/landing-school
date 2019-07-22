@@ -1,3 +1,7 @@
+/*######################################################################## 
+                            CURSOS SECTION                                 
+#########################################################################*/
+
 .cursos-section {
     margin-bottom: 4rem;
 }
@@ -28,6 +32,13 @@
 .separator-fluid {
     @include separator(100%, $text-grey1);
 }
+
+
+
+
+/*######################################################################## 
+                            STATS SECTION                                  
+#########################################################################*/
 
 .stats-flex {
     display: flex;
@@ -76,6 +87,13 @@
     }
 }
 
+
+
+
+/*######################################################################## 
+                            LANZAMIENTOS SECTION                                  
+#########################################################################*/
+
 .lanza-section {
     height: auto;
     &__title {
@@ -114,7 +132,12 @@
             display: none;
             @include desktop {
                 display: block;
-                @include btn-outline(180px, white, white)
+                @include btn-outline(180px, white, white);
+                transition: all .2s ease-out;
+                &:hover {
+                    background: white;
+                    color: #4B23F4;
+                }
             }
         }
     }
@@ -131,6 +154,13 @@
     }
 }
 
+
+
+
+/*######################################################################## 
+                            DIV SPACER                                 
+#########################################################################*/
+
 .spacer {
     display: none;
     @include desktop {
@@ -139,19 +169,27 @@
     }
 }
 
+
+
+
+/*######################################################################## 
+                            LANZA INFO MOBILE AND TABLET                                  
+#########################################################################*/
+
 .lanza-section-info {
     &__flex {
         @include desktop {
             display: none;
         }
     }
-    // &__flex-desktop {
-    //     display: none;
-    //     @include desktop {
-    //         display: flex;
-    //     }
-    // }
 }
+
+
+
+
+/*######################################################################## 
+                            LANZA INFO DESKTOP                                  
+#########################################################################*/
 
 .lanza-desktop {
     display: none;
@@ -185,7 +223,6 @@
             }
         }
         &__board {
-            // margin-right: 7rem;
             &-box {
                 position: relative;
                 width: 300px;
@@ -212,6 +249,13 @@
         }
     }
 }
+
+
+
+
+/*######################################################################## 
+                            ESPERTOS SECTION                                  
+#########################################################################*/
 
 .exp-section {
     @include desktop {
@@ -245,6 +289,13 @@
     margin-top: 5rem;
 }
 
+
+
+
+/*######################################################################## 
+                            CASOS EXITOS SECTION                                  
+#########################################################################*/
+
 .casos-section__title {
     @include desktop {
         padding-left: 4rem;
@@ -267,19 +318,36 @@
 }
 
 
+
+
+/*######################################################################## 
+                            PREMIUM Y EMPRESAS SECTION                                 
+#########################################################################*/
+
 .call-section {
     color: $text-white;
+    width: 100%;
     &__premium {
         background: #4B23F4;
-        padding-right: 9rem; 
+        padding-right: 4rem; 
         &--btn {
             @include btn-outline(180px, white, white);
+            transition: all .2s ease-out;
+            &:hover {
+                background: white;
+                color: #4B23F4;
+            }
         }
         @include tablet {
             padding: 4rem 18rem 4rem 4rem;
         }
         @include desktop {
-            padding: 6rem;
+            padding: 4rem;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
         }
     }
     &__empresas {
@@ -287,12 +355,22 @@
         padding-right: 4rem; 
         &--btn {
             @include btn-outline(180px, white, white);
+            transition: all .2s ease-out;
+            &:hover {
+                background: white;
+                color: #4B23F4;
+            }
         }
         @include tablet {
             padding: 4rem 18rem 4rem 4rem;
         }
         @include desktop {
-            padding: 6rem;
+            padding: 4rem;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
         }
     }
     @include desktop {

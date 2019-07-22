@@ -27,6 +27,66 @@
     }
 }
 
+.footer__boxicons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--item {
+        font-size: 24px;
+        margin: 0px 10px 10px 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.footer__boxbuttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .btn {
+        @include btn(250px, #4B22F4, #4B22F4);
+        transition: all .2s ease-out;
+        span {
+            margin-right: 8px;
+        }
+        &:hover {
+            background: #5CCBD0;
+        }
+    }
+    .btn-outline {
+        @include btn-outline(250px, #E0E0E0, $text-grey2);
+        transition: all .2s ease-out;
+        span {
+            margin-right: 8px;
+        }
+        &:hover {
+            background: #5CCBD0;
+        }
+    }
+}
+
+
+
+
+
+.separator {
+    @include separator(70%, $text-grey1);
+    margin-bottom: 20px;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
 .footer__dropdown {
     display: flex;
     flex-direction: column;
@@ -64,6 +124,10 @@
             font-size: $text-subtitle1;
             text-transform: capitalize;
             color: $text-grey3;
+            &:hover {
+                cursor: pointer;
+                color: black;
+            }
         }
         :last-child {
             margin-bottom: 20px;
@@ -96,46 +160,5 @@
 }
 .activeChevron {
     transform: rotate(90deg);
-}
-
-.footer__boxicons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &--item {
-        font-size: 24px;
-        padding: 0px 10px 10px 10px;
-    }
-}
-
-.footer__boxbuttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .btn {
-        @include btn(250px, #4B22F4, #4B22F4);
-        span {
-            margin-right: 8px;
-        }
-    }
-    .btn-outline {
-        @include btn-outline(250px, #E0E0E0, $text-grey2);
-        span {
-            margin-right: 8px;
-        }
-    }
-}
-
-.separator {
-    @include separator(70%, $text-grey1);
-    margin-bottom: 20px;
-}
-
-.footer__copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
 }
 

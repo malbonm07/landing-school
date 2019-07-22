@@ -1,0 +1,39 @@
+.teacher-card-img {
+    height: 400px;
+    transition: transform 0.3s;
+    overflow: hidden;
+    &__img {
+        transition: transform 0.3s;
+    }
+    .center {
+        transform: translateX(-20%);
+        transition: transform 0.3s;
+    }
+    &__content {
+        position: absolute;
+        padding: 0 1rem 0 1rem;
+        bottom: 5%;
+        color: white;
+        transition: transform .2s;
+        transform: translateY(40px);
+        z-index: 20;
+        &--title {
+            font-size: $text-h6;
+            margin-bottom: 0.5rem;
+        }
+        &--description {
+            font-size: $text-subtitle1;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        .center {
+            // transform: translateX(-30%);
+            transform: scale(1.2,1.2);
+        }
+        .teacher-card-img__content {
+            transform: translateY(0);
+        }
+    }
+}

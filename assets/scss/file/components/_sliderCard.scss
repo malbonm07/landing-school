@@ -1,0 +1,65 @@
+.sliderCard {
+    &__img {
+        &:hover {
+            cursor: pointer;
+        }
+        @include tablet {
+            width: 100%;
+        }
+        position: relative;
+        &--prom {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            background: #FFAB00;
+            color: black;
+            padding: 5px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        &--description {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            bottom: 7%;
+            left: 5%;
+            color: white;
+            font-size: 12px;
+            font-weight: $text-regular;
+            &--bg {
+                background: rgba(0,0,0,0.6);
+                padding: 0 9px 0 9px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            span {
+                font-size: 9px;
+                margin-right: 5px;
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        &__btn--content {
+        @include btn-outline(80%, #4B22F4, #4B22F4);
+        color: #4B22F4;
+        transition: all .2s ease-out;
+        margin-top: 2rem;
+        span {
+            margin-right: 5px;
+        }
+        &:hover {
+            background: #4B22F4;
+            color: $text-white;
+            }
+        }
+    }
+}

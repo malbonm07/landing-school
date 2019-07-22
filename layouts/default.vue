@@ -1,5 +1,7 @@
 <template>
   <div class="main__container">
+
+    <!-------------------------- NAVBAR -------------------------->
     <nav class="navbar">
       <div class="navbar__block">
         <div class="navbar__search">
@@ -13,11 +15,17 @@
         <font-awesome-icon :icon="['fas', 'shopping-cart']"/>
       </div>
     </nav>
+    <!-------------------------- END NAVBAR -------------------------->
+
+
+
+    <!-------------------------- NAVBAR IN DESKTOP -------------------------->
     <div class="desktop-nav pl-2 pr-2">
       <div class="desktop-nav__logo">
         <h2 class="text-space4">CREHANA</h2>
         <div class="logo-btn__appear-menu">
-          <button class="text-white desktop-nav__logo-btn text-body1" @click="showAprendeTabs = !showAprendeTabs">
+          <button class="text-white desktop-nav__logo-btn text-body1" 
+          @click.stop="showAprendeTabs = !showAprendeTabs">
             Aprende
           </button>
           <transition name="tabs">
@@ -25,21 +33,32 @@
               <div class="aprende-tab-menu__header">
                 <button
                   class="aprende-tab__btn text-body1 mr-4" 
-                  @click="currentAprendeTab = tabs[0]">
+                  @click="currentAprendeTab = tabs[0]"
+                  :class="{'tab-active' : currentAprendeTab === tabs[0]}"
+                >
                   <span><font-awesome-icon :icon="['fas', 'book']"/></span>
                   Cursos
                 </button>
                 <button
                   class="aprende-tab__btn text-body1" 
-                  @click="currentAprendeTab = tabs[1]">
+                  @click="currentAprendeTab = tabs[1]"
+                  :class="{'tab-active' : currentAprendeTab === tabs[1]}"
+                >
                   <span><font-awesome-icon :icon="['fas', 'chalkboard']"/></span>
                   Carreras
                 </button>
                 <button
                   class="aprende-tab__btn text-body1 ml-4" 
-                  @click="currentAprendeTab = tabs[2]">
+                  @click="currentAprendeTab = tabs[2]"
+                  :class="{'tab-active' : currentAprendeTab === tabs[2]}"
+                >
                   <span><font-awesome-icon :icon="['fas', 'certificate']"/></span>
                   Certificaciones
+                </button>
+                <button class="close-tabs-menu" 
+                @click.stop="closeAprendeTabs"
+                >
+                  <font-awesome-icon :icon="['fas', 'times']"/>
                 </button>
               </div>
               <div class="aprende-tab-menu__banner">
@@ -49,17 +68,29 @@
                 </keep-alive>
               </div>
               <div class="aprende-tab-menu__aside">
-                <button>
+                <div class="aprende-tab-menu__aside__img">
+                  <img src="~/assets/imagens/promo/img1.jpg" alt="promo imagen" width="100%">
+                </div>
+                <p class="text-regular text-grey3 mt-1">Vive los mejores eventos.</p>
+                <button class="aprende-tab-menu__aside__btn mt-2 text-white text-body1">
                   Ver Promociones
                 </button>
               </div>
             </div>
           </transition>
+          <transition name="tabs">
+            <div v-if="showAprendeTabs" class="aprende-tabs-overlay"
+            @click.stop="closeAprendeTabs"
+            >
+            </div>
+            </transition>
         </div>
         <div class="desktop-nav__line"></div>
       </div>
       <div class="desktop-nav__search">
-        <font-awesome-icon :icon="['fas', 'search']"/>
+        <span class="desktop-nav__search-btn">
+          <font-awesome-icon class="search-btn-icon" :icon="['fas', 'search']"/>
+        </span>
       </div>
       <div class="desktop-nav__links">
         <a>Lives</a>
@@ -71,6 +102,11 @@
         <button class="text-white desktop-nav__links-registration text-body1">Regístrate</button>
       </div>
     </div>
+    <!-------------------------- END NAVBAR IN DESKTOP -------------------------->
+
+
+
+    <!-------------------------- MENU HAMBURGUER -------------------------->
     <div class="navbar__menu">
       <input type="checkbox" id="menu-toggle" @click="show = !show">
       <label for="menu-toggle" class="menu-toggle-label">
@@ -80,7 +116,17 @@
       </label>
       <!-- <font-awesome-icon :icon="['fas', 'bars']"/> -->
     </div>
+    <!-------------------------- END MENU HAMBURGUER -------------------------->
+
+
+
+    <!-------------------------- NUXT VIEWS -------------------------->
     <nuxt />
+    <!-------------------------- END NUXT VIEWS -------------------------->
+
+
+
+    <!-------------------------- FOOTER -------------------------->
     <footer class="footer">
       <div class="footer__box1">
         <div class="footer__dropdown">
@@ -130,11 +176,11 @@
       </div>
       <div class="footer__box2">
         <div class="footer__boxicons">
-          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'facebook-f']"/></div>
-          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'twitter']"/></div>
-          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'instagram']"/></div>
-          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'linkedin']"/></div>
-          <div class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'youtube']"/></div>
+          <a class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'facebook-f']"/></a>
+          <a class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'twitter']"/></a>
+          <a class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'instagram']"/></a>
+          <a class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'linkedin']"/></a>
+          <a class="footer__boxicons--item"><font-awesome-icon :icon="['fab', 'youtube']"/></a>
         </div>
         <div class="footer__boxbuttons">
           <h5 class="text-grey1" style="line-height: 3rem;">DESCARGA NUESTRA APP EN:</h5>
@@ -154,14 +200,19 @@
       </div>
     </footer>
     <hr class="separator">
+    
     <div class="footer__copyright">
       <div>
         <h6 class="text-grey2 text-regular text-space3" style="text-align: center;">Copyright&#169; Crehana 2019</h6>
         <h6 class="text-grey2 text-regular text-space3" style="text-align: center;">Todos los derechos reservados</h6>
       </div>
     </div>
-    <!-- ################### SIDE-BAR ################### -->
+    <!-------------------------- END FOOTER -------------------------->
+    
 
+
+
+    <!-------------------------- SIDE-BAR -------------------------->
     <div class="side-bar" :class="{'appear-sidebar': show}">
       <transition name="fade">
         <div v-if="show" class="side-bar__logo text-h6 text-center text-title text-space3 text-grey3">CREHANA</div>
@@ -190,15 +241,11 @@
 
       </div>
     </div>
-
-    <!-- ################### END SIDE-BAR ################### -->
+    <!-------------------------- END SIDE-BAR -------------------------->
+    
   </div>
 </template>
-<!-- <p>Icons</p>
-<font-awesome-icon :icon="['fab', 'facebook']"/>
-<font-awesome-icon :icon="['fab', 'github']"/>
-<font-awesome-icon :icon="['fab', 'facebook']"/>
-<font-awesome-icon :icon="['fas', 'shopping-cart']"/> -->
+
 <script>
 
 import cursosTab from '~/components/aprende-tabs/cursos.vue'
@@ -223,7 +270,15 @@ export default {
       showAprendeTabs: false
     }
   },
+  methods: {
+    closeAprendeTabs() {
+      if(this.showAprendeTabs) {
+        this.showAprendeTabs = false
+      }
+    }
+  },
   mounted() {
+    
     let dropdownBtn = document.querySelectorAll('.footer__dropdown--title');
     let dropdownList = document.querySelectorAll('.footer__dropdown--list');
     const dropdownBtnArray = Array.from(dropdownBtn)
@@ -240,7 +295,6 @@ export default {
   computed: {
     currentAprendeTabComponent() {
       return `${this.currentAprendeTab}Tab`;
-      console.log(this.currentAprendeTab);
     }
   }
 }

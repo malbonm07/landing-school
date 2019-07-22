@@ -1,0 +1,37 @@
+.slider-card-img {
+    height: 400px;
+    transition: 2s;
+    overflow: hidden;
+    &--img {
+        position: relative;
+    }
+    .center {
+        transition: transform 0.3s;
+    }
+    &__content {
+        position: absolute;
+        padding: 0 1rem 0 1rem;
+        bottom: 5%;
+        color: white;
+        transition: transform .2s;
+        transform: translateY(40px);
+        &--title {
+            font-size: $text-h6;
+            margin-bottom: 0.5rem;
+        }
+        &--description {
+            font-size: $text-caption;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        .center {
+            // transform: translateX(-30%);
+            transform: scale(1.2,1.2);
+        }
+        .slider-card-img__content {
+            transform: translateY(0);
+        }
+    }
+}

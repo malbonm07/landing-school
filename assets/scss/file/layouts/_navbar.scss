@@ -1,6 +1,14 @@
 .main__container {
     width: 100%;
 }
+
+
+
+
+/*######################################################################## 
+                            NAVBAR                                 
+#########################################################################*/
+
 .navbar {
     display: flex;
     background: transparent;
@@ -24,7 +32,7 @@
             font-size: $iconSize_navbar;
             margin-left: 2.5rem;
             @include tablet {
-                margin-left: 4rem;
+                margin-left: 5rem;
             }
         }
     }
@@ -40,6 +48,9 @@
     &__buy {
         margin-right: 2rem;
         font-size: $iconSize_navbar;
+        @include tablet {
+          margin-right: 2.5rem;
+        }
     }
 }
 
@@ -51,6 +62,9 @@
     top: 25px;
     left: 2.7rem;
     transform: translate(-50%, -50%);
+    @include tablet {
+      left: 3.3rem;
+    }
     @include desktop {
       display: none;
     }
@@ -113,7 +127,208 @@
       }
     }
 }
-/* ######################### SIDE-BAR ######################### */
+
+
+
+
+
+/*######################################################################## 
+                            NAVBAR IN DESKTOP AND TABS                                 
+#########################################################################*/
+
+.desktop-nav {
+  display: none;
+  @include desktop {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    height: 70px;
+    color:white;
+    font-size: 14px;
+    &__line {
+      width: 1px;
+      height: 23px;
+      background: #616161;
+    }
+    &__logo {
+      display: flex;
+      justify-content: space-around;
+      width: 25%;
+      display: flex;
+      &-btn {
+        background: transparent;
+        border: none;
+        outline: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .logo-btn__appear-menu {
+        position: relative;
+        color: $text-grey3;
+        .aprende-tab-menu {
+          position: absolute;
+          display: grid;
+          grid-template-columns: 70% 30%;
+          grid-template-rows: 70px 70vh;
+          background: white;
+          width: 924px;
+          top: 50px;
+          left: -114px;
+          z-index: 30;
+          &__header {
+            position: relative;
+            width: 100%;
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            border-bottom: 1.5px solid #EEEEEE;
+            .aprende-tab__btn {
+              display: flex;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+              background: transparent;
+              border-top: none;
+              border-left: none;
+              border-right:none;
+              border-bottom: 1.5px solid transparent;
+              outline: none;
+              color: $text-grey1;
+              span {
+                font-size: 25px;
+                margin-right: 7px;
+              }
+              &:hover {
+                border-color: #4B23F4;
+                color: #4B23F4;
+                cursor: pointer;
+              }
+            }
+            .close-tabs-menu {
+              position: absolute;
+              top: 0;
+              right: 0;
+              height: 100%;
+              width: 70px;
+              font-size: 22px;
+              color: $text-grey3;
+              border: none;
+              outline: none;
+              transition: all .2s ease-out;
+              &:hover {
+                cursor: pointer;
+                background: rgba(75,35,244,0.2);
+              }
+            }
+            .tab-active {
+              color: #4B23F4;
+              border-color: #4B23F4;
+            }
+            
+          }
+          &__banner {
+            width: 100%;
+            height: 100%;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+          }
+          &__aside {
+            width: 100%;
+            height: 100%;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            border-left: 1.5px solid #EEEEEE;
+            padding: 2rem 20px 2rem 20px;
+            &__img {
+              width: 100%;
+            }
+            &__btn {
+              @include btn(100%, #4B23F4, #4B23F4);
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .aprende-tabs-overlay {
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.7);
+          z-index: 20;
+        }
+      }
+    }
+    &__search {
+      margin-left: 2rem;
+      width: 25%;
+      transition: all 1s;
+      &-btn {
+        display: block;
+        width: 8%;
+        transition: all .2s;
+        .search-btn-icon {
+          width: 100%;
+        }
+        &:hover {
+          transform: scale(1.3,1.3);
+          cursor: pointer;
+        }
+      }
+    }
+    &__links {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      a {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &-login {
+        background: transparent;
+        border: none;
+        outline: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &-registration {
+        background:transparent;
+        border: 1px solid white;
+        padding: 10px 23px;
+        text-align: center;
+        outline: none;
+        &:hover {
+          cursor: pointer;
+          background: white;
+          color: #4B23F4;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/*######################################################################## 
+                            SIDE-BAR                                 
+#########################################################################*/
 
 .side-bar {
     // background: rgba(75,35,244,0.9);
@@ -182,158 +397,4 @@
     transform: translateX(0%);
     z-index: 40;
   }
-//   .appear-sidebar:after {
-//     content: "";
-//     // botton: 0;
-//     right: 0;
-//     z-index: 1;
-//     position: absolute;
-//     background: rgba(0,0,0,0.9)
-//   }
 
-.fade-enter-active, .fade-leave-active {
-  // transition-delay: 4s;
-  transition: opacity .5s ease-out 0.12s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-.tabs-enter-active, .tabs-leave-active {
-  // transition-delay: 4s;
-  transition: opacity 0.18s ease-out;
-}
-.tabs-enter, .tabs-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
-.desktop-nav {
-  display: none;
-  @include desktop {
-    position: absolute;
-    z-index: 50;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    height: 70px;
-    color:white;
-    font-size: 14px;
-    &__line {
-      width: 1px;
-      height: 23px;
-      background: #616161;
-    }
-    &__logo {
-      display: flex;
-      justify-content: space-around;
-      width: 25%;
-      display: flex;
-      &-btn {
-        background: transparent;
-        border: none;
-        outline: none;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-      .logo-btn__appear-menu {
-        position: relative;
-        color: $text-grey3;
-        .aprende-tab-menu {
-          position: absolute;
-          display: grid;
-          grid-template-columns: 70% 30%;
-          grid-template-rows: 70px 530px;
-          background: white;
-          width: 924px;
-          height: 600px;
-          top: 50px;
-          left: -114px;
-          z-index: 30;
-          &__header {
-            width: 100%;
-            grid-column: 1 / 3;
-            grid-row: 1 / 2;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            border-bottom: 1.5px solid #EEEEEE;
-            .aprende-tab__btn {
-              display: flex;
-              justify-content: center;
-              align-content: center;
-              align-items: center;
-              background: transparent;
-              border-top: none;
-              border-left: none;
-              border-right:none;
-              border-bottom: 1.5px solid transparent;
-              outline: none;
-              color: $text-grey1;
-              span {
-                font-size: 25px;
-                margin-right: 7px;
-              }
-              &:hover {
-                border-color: #4B23F4;
-                color: #4B23F4;
-                cursor: pointer;
-              }
-            }
-            
-          }
-          &__banner {
-            width: 100%;
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-          }
-          &__aside {
-            width: 100%;
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-            border-left: 1.5px solid #EEEEEE;
-          }
-        }
-      }
-    }
-    &__search {
-      margin-left: 2rem;
-      width: 25%;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    &__links {
-      width: 50%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      a {
-        &:hover {
-          cursor: pointer;
-        }
-      }
-      &-login {
-        background: transparent;
-        border: none;
-        outline: none;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-      &-registration {
-        background:transparent;
-        border: 1px solid white;
-        padding: 7px 20px;
-        text-align: center;
-        outline: none;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-  }
-}

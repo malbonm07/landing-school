@@ -1,3 +1,7 @@
+/*######################################################################## 
+                            VIEWPORT MIXINS                                  
+#########################################################################*/
+
 @mixin phone {
     @media (max-width: 599px) { @content; }
   }
@@ -14,6 +18,13 @@
     @media (min-width: 1330px) { @content; }
   }
 
+
+
+
+/*######################################################################## 
+                            BUTTONS MIXINS                                  
+#########################################################################*/
+  
 @mixin btn($width, $color1, $color2) {
     width: $width;
     line-height: 40px;
@@ -36,20 +47,28 @@
       cursor: pointer;
     }
 }
+@mixin swiper-mobile-btn {
+  font-size: 18px;
+  color: #4B22F4;
+  border: none;
+  outline: none;
+  margin: 0 15px 0 15px;
+  background: transparent;
+  &:hover {
+      cursor: pointer;
+  }
+}
+
+
+
+
+
+/*######################################################################## 
+                            SEPARATOR MIXIN                                  
+#########################################################################*/
+
 @mixin separator($width, $color) {
     width: $width;
     border: 0.5px solid $color;
     margin: auto;
-}
-
-@mixin swiper-mobile-btn {
-    font-size: 18px;
-    color: #4B22F4;
-    border: none;
-    outline: none;
-    margin: 0 15px 0 15px;
-    background: transparent;
-    &:hover {
-        cursor: pointer;
-    }
 }
