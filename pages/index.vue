@@ -340,33 +340,33 @@
 </template>
 
 <script>
-import sliderCard from '~/components/sliderCard.vue'
-import sliderCardImg from '~/components/sliderCardImg.vue'
-import teacherCard from '~/components/teacherCard.vue'
-import casosCard from '~/components/casosCard.vue'
+import sliderCard from '~/components/sliderCard.vue';
+import sliderCardImg from '~/components/sliderCardImg.vue';
+import teacherCard from '~/components/teacherCard.vue';
+import casosCard from '~/components/casosCard.vue';
 
-import curso1 from '~/assets/imagens/cursos/img1.jpg'
-import curso2 from '~/assets/imagens/cursos/img2.jpg'
-import curso3 from '~/assets/imagens/cursos/img3.jpg'
-import curso4 from '~/assets/imagens/cursos/img4.jpg'
+import curso1 from '~/assets/imagens/cursos/img1.jpg';
+import curso2 from '~/assets/imagens/cursos/img2.jpg';
+import curso3 from '~/assets/imagens/cursos/img3.jpg';
+import curso4 from '~/assets/imagens/cursos/img4.jpg';
 
-import img1 from '~/assets/imagens/courses/img1.jpg'
-import img2 from '~/assets/imagens/courses/img2.jpg'
-import img3 from '~/assets/imagens/courses/img3.jpg'
+import img1 from '~/assets/imagens/courses/img1.jpg';
+import img2 from '~/assets/imagens/courses/img2.jpg';
+import img3 from '~/assets/imagens/courses/img3.jpg';
 
-import teacher1 from '~/assets/imagens/teachers/img1.jpg'
-import teacher2 from '~/assets/imagens/teachers/img2.jpg'
-import teacher3 from '~/assets/imagens/teachers/img3.jpg'
-import teacher4 from '~/assets/imagens/teachers/img4.jpg'
+import teacher1 from '~/assets/imagens/teachers/img1.jpg';
+import teacher2 from '~/assets/imagens/teachers/img2.jpg';
+import teacher3 from '~/assets/imagens/teachers/img3.jpg';
+import teacher4 from '~/assets/imagens/teachers/img4.jpg';
 
-import caso1 from '~/assets/imagens/casos/img1.jpg'
-import caso2 from '~/assets/imagens/casos/img2.jpg'
-import caso3 from '~/assets/imagens/casos/img3.jpg'
-import caso4 from '~/assets/imagens/casos/img4.jpg'
+import caso1 from '~/assets/imagens/casos/img1.jpg';
+import caso2 from '~/assets/imagens/casos/img2.jpg';
+import caso3 from '~/assets/imagens/casos/img3.jpg';
+import caso4 from '~/assets/imagens/casos/img4.jpg';
 
-import info1 from '~/assets/imagens/info-images/img1.jpg'
-import info2 from '~/assets/imagens/info-images/img2.jpg'
-import info3 from '~/assets/imagens/info-images/img3.jpg'
+import info1 from '~/assets/imagens/info-images/img1.jpg';
+import info2 from '~/assets/imagens/info-images/img2.jpg';
+import info3 from '~/assets/imagens/info-images/img3.jpg';
 
 export default {
   components: {
@@ -388,7 +388,7 @@ export default {
                 nivel: "Nivel introductorio",
                 precio: 160.99,
                 link: "null",
-                students: "176",
+                students: "156",
                 time: "2h 21m",
                 promo: true
               },
@@ -396,7 +396,7 @@ export default {
                 img: curso2,
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
-                precio: 160.99,
+                precio: 170.99,
                 link: "null",
                 students: "176",
                 time: "2h 21m",
@@ -408,7 +408,7 @@ export default {
                 nivel: "Nivel introductorio",
                 precio: 29.99,
                 link: "null",
-                students: "176",
+                students: "142",
                 time: "2h 21m",
                 promo: false
               },
@@ -418,7 +418,7 @@ export default {
                 nivel: "Nivel introductorio",
                 precio: 49.99,
                 link: "null",
-                students: "176",
+                students: "132",
                 time: "2h 21m",
                 promo: false
               },
@@ -438,7 +438,7 @@ export default {
                 nivel: "Nivel introductorio",
                 precio: 49.99,
                 link: "null",
-                students: "176",
+                students: "116",
                 time: "2h 21m",
                 promo: false
               },

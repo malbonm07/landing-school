@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="navbar__logo">
-        <div><h1 class="text-h6 text-title text-space3">CREHANA</h1></div>
+        <div><h1 class="text-h6 text-title text-space3">LOREMPAGE</h1></div>
       </div>
       <div class="navbar__buy">
         <font-awesome-icon :icon="['fas', 'shopping-cart']"/>
@@ -22,7 +22,7 @@
     <!-------------------------- NAVBAR IN DESKTOP -------------------------->
     <div class="desktop-nav pl-2 pr-2">
       <div class="desktop-nav__logo">
-        <h2 class="text-space4">CREHANA</h2>
+        <h2 class="text-space4"><nuxt-link to="/" style="color: white;">LOREMPAGE</nuxt-link></h2>
         <div class="logo-btn__appear-menu">
           <button class="text-white desktop-nav__logo-btn text-body1" 
           @click.stop="showAprendeTabs = !showAprendeTabs">
@@ -93,9 +93,9 @@
         </span>
       </div>
       <div class="desktop-nav__links">
-        <a>Lives</a>
-        <a>Blog</a>
-        <a>Membresias</a>
+        <a><nuxt-link to="lives" style="color: white;">Lives</nuxt-link></a>
+        <a><nuxt-link to="/" style="color: white;">Blog</nuxt-link></a>
+        <a><nuxt-link to="/" style="color: white;">Membresías</nuxt-link></a>
         <div class="desktop-nav__line"></div>
         <a><font-awesome-icon :icon="['fas', 'shopping-cart']"/></a>
         <button class="text-white desktop-nav__links-login text-body1">Ingresar</button>
@@ -215,7 +215,7 @@
     <!-------------------------- SIDE-BAR -------------------------->
     <div class="side-bar" :class="{'appear-sidebar': show}">
       <transition name="fade">
-        <div v-if="show" class="side-bar__logo text-h6 text-center text-title text-space3 text-grey3">CREHANA</div>
+        <div v-if="show" class="side-bar__logo text-h6 text-center text-title text-space3 text-grey3">LOREMPAGE</div>
       </transition>
         <div class="side-bar__content pr-2 pl-2 pb-2">
           <ul class="side-bar__content-list">

@@ -1,9 +1,12 @@
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
+  router: {
+    base: '/nuxt-school-template/'
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
