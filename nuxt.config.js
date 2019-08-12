@@ -5,7 +5,7 @@ export default {
   ** Headers of the page
   */
   router: {
-    base: '/nuxt-school-template/'
+    base: '/landing-school/'
   },
   head: {
     title: process.env.npm_package_name || '',

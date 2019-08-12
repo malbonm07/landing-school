@@ -29,6 +29,9 @@
             Aprende
           </button>
           <transition name="tabs">
+
+            
+            <!----------------------- MODAL NAVBAR IN DESKTOP ----------------------->
             <div v-if="showAprendeTabs" class="aprende-tab-menu">
               <div class="aprende-tab-menu__header">
                 <button
@@ -69,7 +72,7 @@
               </div>
               <div class="aprende-tab-menu__aside">
                 <div class="aprende-tab-menu__aside__img">
-                  <img src="~/assets/imagens/promo/img1.jpg" alt="promo imagen" width="100%">
+                  <img src="https://i.imgur.com/lXCElEF.jpg" alt="promo imagen" width="100%">
                 </div>
                 <p class="text-regular text-grey3 mt-1">Vive los mejores eventos.</p>
                 <button class="aprende-tab-menu__aside__btn mt-2 text-white text-body1">
@@ -77,6 +80,9 @@
                 </button>
               </div>
             </div>
+            <!--------------------- END MODAL NAVBAR IN DESKTOP --------------------->
+
+
           </transition>
           <transition name="tabs">
             <div v-if="showAprendeTabs" class="aprende-tabs-overlay"
@@ -222,7 +228,6 @@
             <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Cursos<span></span></a></li>
             <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Lives</a></li>
             <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Blog</a></li>
-            <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Membresías</a></li>
             <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Carreras</a></li>
             <li class="pt-1 pb-1"><a class="text-subtitle1 text-light">Certificaciones</a></li>
           </ul>

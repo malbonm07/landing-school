@@ -16,62 +16,52 @@
 
 <script>
 
-import carreraImg1 from '~/assets/imagens/carreras-tab/img1.png'
-import carreraImg2 from '~/assets/imagens/carreras-tab/img2.png'
-import carreraImg3 from '~/assets/imagens/carreras-tab/img3.png'
-import carreraImg4 from '~/assets/imagens/carreras-tab/img4.png'
-import carreraImg5 from '~/assets/imagens/carreras-tab/img5.png'
-import carreraImg6 from '~/assets/imagens/carreras-tab/img6.png'
-import carreraImg7 from '~/assets/imagens/carreras-tab/img7.png'
-import carreraImg8 from '~/assets/imagens/carreras-tab/img8.png'
-import carreraImg9 from '~/assets/imagens/carreras-tab/img9.png'
-
 export default {
     data() {
         return {
             carreras: [
                 {
-                img: carreraImg1,
+                img: 'https://i.imgur.com/7GaxfZs.png',
                 title: 'carrera animacion 3d',
                 cantidad: '10'
                 },
                 {
-                img: carreraImg2,
+                img: 'https://i.imgur.com/G9XI2vO.png',
                 title: 'carrera frontend',
                 cantidad: '9'
                 },
                 {
-                img: carreraImg3,
+                img: 'https://i.imgur.com/ZOwppQH.png',
                 title: 'carrera diseño digital',
                 cantidad: '10'
                 },
                 {
-                img: carreraImg4,
+                img: 'https://i.imgur.com/F54s31t.png',
                 title: 'carrera fotografia',
                 cantidad: '12'
                 },
                 {
-                img: carreraImg5,
+                img: 'https://i.imgur.com/ABVriPO.png',
                 title: 'carrera marketing digital',
                 cantidad: '6'
                 },
                 {
-                img: carreraImg6,
+                img: 'https://i.imgur.com/88CtEhX.png',
                 title: 'carrera diseño grafico',
                 cantidad: '11'
                 },
                 {
-                img: carreraImg7,
+                img: 'https://i.imgur.com/2dyntA3.png',
                 title: 'carrera ilustracion',
                 cantidad: '8'
                 },
                 {
-                img: carreraImg8,
+                img: 'https://i.imgur.com/VbHY3Og.png',
                 title: 'carrera de retoque digital',
                 cantidad: '5'
                 },
                 {
-                img: carreraImg9,
+                img: 'https://i.imgur.com/X39ga4h.png',
                 title: 'carrera de branding',
                 cantidad: '8'
                 },

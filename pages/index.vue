@@ -154,53 +154,42 @@
           <div v-swiper:mySwiper3="swiperOption3" class="swiper-container mt-4">
               <ul class="swiper-wrapper">
                   <li class="swiper-slide">
-                    <div class="swiper-info__card card1" style="transform: translateY(60px);">
+                    <div class="swiper-info__card">
                       <h5 class="text-subtitle1 mb-1">Carreras</h5>
+                      <p class="text-body1 text-light text-left line-height1 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                      <a class="text-body1" style="cursor: pointer;">
+                        Explorar
+                        <span class="text-body1 ml-1"><font-awesome-icon class="chevronIcon" :icon="['fas', 'arrow-right']"/>
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="swiper-info__card">
+                      <h5 class="text-subtitle1 mb-1">Certificaciones</h5>
+                      <p class="text-body1 text-light text-left line-height1 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
+                      <a class="text-body1" style="cursor: pointer;">
+                        Explorar
+                        <span class="text-body1 ml-1"><font-awesome-icon class="chevronIcon" :icon="['fas', 'arrow-right']"/>
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="swiper-info__card">
+                      <h5 class="text-subtitle1 mb-1">Cursos</h5>
                       <p class="text-body1 text-light text-left line-height1 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
                       <a class="text-body1" style="cursor: pointer;">
-                        Explorar carreras
-                        <span class="text-body1 ml-1"><font-awesome-icon class="chevronIcon" :icon="['fas', 'arrow-right']"/>
-                        </span>
-                      </a>
-                    </div>
-                  </li>
-                  <li class="swiper-slide">
-                    <div class="swiper-info__card card2" style="transform: translateY(30px)">
-                      <h5 class="text-subtitle1 mb-1">Certificaciones</h5>
-                      <p class="text-body1 text-light text-left line-height1 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                      <a class="text-body1" style="cursor: pointer;">
-                        Explorar certificaciones
-                        <span class="text-body1 ml-1"><font-awesome-icon class="chevronIcon" :icon="['fas', 'arrow-right']"/>
-                        </span>
-                      </a>
-                    </div>
-                  </li>
-                  <li class="swiper-slide">
-                    <div class="swiper-info__card card3">
-                      <h5 class="text-subtitle1 mb-1">Cursos</h5>
-                      <p class="text-body1 text-light text-left line-height1 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                      <a class="text-body1" style="cursor: pointer;">
-                        Explorar cursos
+                        Explorar
                         <span class="text-body1 ml-1"><font-awesome-icon class="chevronIcon" :icon="['fas', 'arrow-right']"/>
                         </span>
                       </a>
                     </div>
                   </li>
               </ul>
-              <!-- <div class="swiper-pagination__content">
-                <button
-                    class="swiper-button swiper2-left"
-                >
-                    <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-left']"/>
-                </button>
-                <div class="swiper-pag" slot="pagination"></div>
-                <button
-                    class="swiper-button swiper2-right"
-                >
-                    <font-awesome-icon class="chevronIcon" :icon="['fas', 'chevron-right']"/>
-                </button>
-              </div> -->
           </div>   
         </div>
       </div>
@@ -345,29 +334,6 @@ import sliderCardImg from '~/components/sliderCardImg.vue';
 import teacherCard from '~/components/teacherCard.vue';
 import casosCard from '~/components/casosCard.vue';
 
-import curso1 from '~/assets/imagens/cursos/img1.jpg';
-import curso2 from '~/assets/imagens/cursos/img2.jpg';
-import curso3 from '~/assets/imagens/cursos/img3.jpg';
-import curso4 from '~/assets/imagens/cursos/img4.jpg';
-
-import img1 from '~/assets/imagens/courses/img1.jpg';
-import img2 from '~/assets/imagens/courses/img2.jpg';
-import img3 from '~/assets/imagens/courses/img3.jpg';
-
-import teacher1 from '~/assets/imagens/teachers/img1.jpg';
-import teacher2 from '~/assets/imagens/teachers/img2.jpg';
-import teacher3 from '~/assets/imagens/teachers/img3.jpg';
-import teacher4 from '~/assets/imagens/teachers/img4.jpg';
-
-import caso1 from '~/assets/imagens/casos/img1.jpg';
-import caso2 from '~/assets/imagens/casos/img2.jpg';
-import caso3 from '~/assets/imagens/casos/img3.jpg';
-import caso4 from '~/assets/imagens/casos/img4.jpg';
-
-import info1 from '~/assets/imagens/info-images/img1.jpg';
-import info2 from '~/assets/imagens/info-images/img2.jpg';
-import info3 from '~/assets/imagens/info-images/img3.jpg';
-
 export default {
   components: {
     sliderCard,
@@ -378,12 +344,12 @@ export default {
   data () {
       return {
             infoBanner: {
-                img: info1,
+                img: 'https://i.imgur.com/Jwx6uPc.jpg',
                 description: 'Estudia con nosotros y asegura el éxito, haz la diferencia con las habilidades que aprenderás. Te estamos esperando!'
               },
             courses: [
               {
-                img: curso1,
+                img: 'https://i.imgur.com/p00nsl4.jpg',
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 160.99,
@@ -393,7 +359,7 @@ export default {
                 promo: true
               },
               {
-                img: curso2,
+                img: 'https://i.imgur.com/EdBsGwi.jpg',
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 170.99,
@@ -403,7 +369,7 @@ export default {
                 promo: true
               },
               {
-                img: curso3,
+                img: 'https://i.imgur.com/ZSzacVN.jpg',
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 29.99,
@@ -413,7 +379,7 @@ export default {
                 promo: false
               },
               {
-                img: curso4,
+                img: 'https://i.imgur.com/VA0gLxg.jpg',
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 49.99,
@@ -423,7 +389,7 @@ export default {
                 promo: false
               },
               {
-                img: curso1,
+                img: 'https://i.imgur.com/p00nsl4.jpg',
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 49.99,
@@ -433,7 +399,7 @@ export default {
                 promo: false
               },
               {
-                img: curso2,
+                img: 'https://i.imgur.com/EdBsGwi.jpg',
                 title: "Aprender a dibujar al estilo cómic",
                 nivel: "Nivel introductorio",
                 precio: 49.99,
@@ -482,25 +448,25 @@ export default {
             },
             banners: [
               {
-                img: img1,
+                img: 'https://i.imgur.com/xFOzt6j.jpg?1',
                 title: 'ilustracion y diseño',
                 description: '4h 20m',
                 translate: '20'
               },
               {
-                img: img2,
+                img: 'https://i.imgur.com/qPuNoXt.jpg?3',
                 title: 'introduccion a la direccion de fotografia',
                 description: '5h 10m',
                 translate: '30'
               },
               {
-                img: img3,
+                img: 'https://i.imgur.com/xZdIgku.jpg',
                 title: 'aprende a tocar diferentes instrumentos',
                 description: '7h 25m',
                 translate: '50'
               },
               {
-                img: img2,
+                img: 'https://i.imgur.com/xFOzt6j.jpg?1',
                 title: 'introduccion a la direccion de fotografia',
                 description: '5h 10m',
                 translate: '70'
@@ -508,49 +474,49 @@ export default {
             ],
             teachers: [
               {
-                img: teacher3,
+                img: 'https://i.imgur.com/fAofY8n.jpg',
                 title: 'Roe Zambrano',
                 description: 'Sr account manager',
                 translate: '20'
               },
               {
-                img: teacher4,
+                img: 'https://i.imgur.com/iS84N3S.jpg?1',
                 title: 'Arturo Aragon',
                 description: 'Fotografo',
                 translate: '30'
               },
               {
-                img: teacher1,
+                img: 'https://i.imgur.com/Kl4ness.jpg?1',
                 title: 'Pia Valdivia',
                 description: 'Colorista',
                 translate: '50'
               },
               {
-                img: teacher2,
+                img: 'https://i.imgur.com/bHdX3AP.jpg?1',
                 title: 'Patricia Lombardi',
                 description: 'Comic Artist',
                 translate: '70'
               },
               {
-                img: teacher1,
+                img: 'https://i.imgur.com/Kl4ness.jpg?1',
                 title: 'Roe Zambrano',
                 description: 'Sr account manager',
                 translate: '20'
               },
               {
-                img: teacher4,
+                img: 'https://i.imgur.com/iS84N3S.jpg?1',
                 title: 'Arturo Aragon',
                 description: 'Fotografo',
                 translate: '30'
               },
               {
-                img: teacher1,
+                img: 'https://i.imgur.com/Kl4ness.jpg?1',
                 title: 'Pia Valdivia',
                 description: 'Colorista',
                 translate: '50'
               },
               {
-                img: teacher3,
+                img: 'https://i.imgur.com/fAofY8n.jpg',
                 title: 'Patricia Lombardi',
                 description: 'Comic Artist',
                 translate: '70'
@@ -558,36 +524,36 @@ export default {
             ],
             infoBanners: [
               {
-                img: info1,
+                img: 'https://i.imgur.com/Jwx6uPc.jpg',
                 description: 'Estudia con nosotros y asegura el éxito, haz la diferencia con las habilidades que aprenderás. Te estamos esperando!'
               },
               {
-                img: info3,
+                img: 'https://i.imgur.com/JgCIefz.jpg',
                 description: 'Contamos con packs de cursos complementarios que te ayudarán a profundizar y especializarte en lo que más te apasiona.'
               },
               {
-                img: info2,
+                img: 'https://i.imgur.com/94u0iyG.jpg',
                 description: 'Contamos con cursos en diversas categorías y niveles para que aprendas desde cero o complementes tus habilidades junto a expertos de la industria.'
               },
             ],
             casos: [
               {
-                img: caso1,
+                img: 'https://i.imgur.com/rHywXOR.jpg',
                 name: 'ana barbara t.',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
               },
               {
-                img: caso2,
+                img: 'https://i.imgur.com/YGQvo5Q.jpg',
                 name: 'elizabeth betancurt r.',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
               },
               {
-                img: caso3,
+                img: 'https://i.imgur.com/645F3GL.jpg',
                 name: 'vanessa ale g.',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
               },
               {
-                img: caso4,
+                img: 'https://i.imgur.com/YY7umbf.jpg',
                 name: 'carmen de los angeles',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
               }
@@ -656,7 +622,7 @@ export default {
                     spaceBetween: 20
                   },
                   320: {
-                    slidesPerView: 1.3,
+                    slidesPerView: 1.2,
                     spaceBetween: 20
                   }
               }

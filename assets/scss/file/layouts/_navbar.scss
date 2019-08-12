@@ -26,11 +26,11 @@
     &__block {
         margin-left: 2rem;
         display: flex;
-        width: 70px;
+        width: 30%;
         justify-content: space-between;
         .navbar__search {
             font-size: $iconSize_navbar;
-            margin-left: 2.5rem;
+            margin-left: 35%;
             @include tablet {
                 margin-left: 5rem;
             }
@@ -334,13 +334,10 @@
 #########################################################################*/
 
 .side-bar {
-    // background: rgba(75,35,244,0.9);
-    // background: rgba(255,255,255,0.9);
     background: white;
     bottom: 0;
     font-size: 14px;
     overflow-y: auto;
-    // padding: 0px 0 30px;
     position: fixed;
     top: 0px;
     transform: translateX(-100%);

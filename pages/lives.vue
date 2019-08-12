@@ -28,11 +28,10 @@
 </template>
 
 <script>
-import curso3 from '~/assets/imagens/cursos/img3.jpg';
 export default {
     data() {
         return {
-            imagen: curso3,
+            imagen: 'https://i.imgur.com/ZSzacVN.jpg',
         }
     }
 }

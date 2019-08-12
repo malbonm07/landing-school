@@ -177,6 +177,11 @@
 #########################################################################*/
 
 .lanza-section-info {
+    .swiper-info__card {
+        padding: 25px;
+        background: #4B23F4;
+        color: white;
+    }
     &__flex {
         @include desktop {
             display: none;

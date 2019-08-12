@@ -16,62 +16,52 @@
 
 <script>
 
-import carreraImg1 from '~/assets/imagens/carreras-tab/img1.png'
-import carreraImg2 from '~/assets/imagens/carreras-tab/img2.png'
-import carreraImg3 from '~/assets/imagens/carreras-tab/img3.png'
-import carreraImg4 from '~/assets/imagens/carreras-tab/img4.png'
-import carreraImg5 from '~/assets/imagens/carreras-tab/img5.png'
-import carreraImg6 from '~/assets/imagens/carreras-tab/img6.png'
-import carreraImg7 from '~/assets/imagens/carreras-tab/img7.png'
-import carreraImg8 from '~/assets/imagens/carreras-tab/img8.png'
-import carreraImg9 from '~/assets/imagens/carreras-tab/img9.png'
-
 export default {
     data() {
         return {
             certificaciones: [
                 {
-                img: carreraImg4,
+                img: 'https://i.imgur.com/ABVriPO.png',
                 title: 'certificate enimacion 3d',
                 cantidad: '10'
                 },
                 {
-                img: carreraImg5,
+                img: 'https://i.imgur.com/7GaxfZs.png',
                 title: 'certificate enontend',
                 cantidad: '9'
                 },
                 {
-                img: carreraImg7,
+                img: 'https://i.imgur.com/G9XI2vO.png',
                 title: 'certificate enseño digital',
                 cantidad: '10'
                 },
                 {
-                img: carreraImg1,
+                img: 'https://i.imgur.com/ZOwppQH.png',
                 title: 'certificate entografia',
                 cantidad: '12'
                 },
                 {
-                img: carreraImg2,
+                img: 'https://i.imgur.com/F54s31t.png',
                 title: 'certificate enrketing digital',
                 cantidad: '6'
                 },
                 {
-                img: carreraImg9,
+                img: 'https://i.imgur.com/7GaxfZs.png',
                 title: 'certificate enseño grafico',
                 cantidad: '11'
                 },
                 {
-                img: carreraImg3,
+                img: 'https://i.imgur.com/G9XI2vO.png',
                 title: 'certificate enustracion',
                 cantidad: '8'
                 },
                 {
-                img: carreraImg8,
+                img: 'https://i.imgur.com/F54s31t.png',
                 title: 'certificate en retoque digital',
                 cantidad: '5'
                 },
                 {
-                img: carreraImg6,
+                img: 'https://i.imgur.com/ZOwppQH.png',
                 title: 'certificate en branding',
                 cantidad: '8'
                 },
