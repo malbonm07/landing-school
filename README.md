@@ -23,6 +23,7 @@ $ npm run generate
 
 This is a personal project to demostrate my skills as a Front End developer. This landing page was created only with Vue-Cli. I put particular focus in reusables componentes, transitions and animations by vue transitions and pure Css.
 
+![alt text](https://i.imgur.com/BvvzvSB.png)
 
 ## Important things to highlight:
 
