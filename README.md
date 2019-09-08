@@ -49,10 +49,6 @@ This is a personal project to demostrate my skills as a Front End developer. Thi
 * Javascript
 * [Font Awesome](https://fontawesome.com/icons?d=gallery)
 
-## To Learn:
-
-* [Nuxt](https://nuxtjs.org/)
-
 ---
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 @malbonm07
